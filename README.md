@@ -1,11 +1,11 @@
 # global-game-jam-2023
+Este é um jogo que será feito com muito carinho para a Global Game Jam 2024
 
-Test Push Max
+Os membros da equipe são:
 
-Editing something...
-
-Test Push uotlaf
-
-Loren ipsum
+Alyson Estrela
+Andrei Ramos
+Carlos Veras
+Maxwell Pires
 
 More Editing..
