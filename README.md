@@ -1,4 +1,4 @@
-# global-game-jam-2023
+# global-game-jam-2024
 Este é um jogo que será feito com muito carinho para a Global Game Jam 2024
 
 Os membros da equipe são:
