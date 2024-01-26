@@ -8,4 +8,10 @@ Andrei Ramos
 Carlos Veras
 Maxwell Pires
 
-More Editing..
+
+# Membros da equipe
+[uotlaf](https://github.com/uotlaf/) \
+[Carlos Veras](https://github.com/alphinos) \
+[Andrei](https://github.com/Andreirl032) \
+[Maxwll Pires](https://github.com/Maxw-ll)
+
