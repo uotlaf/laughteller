@@ -4,9 +4,9 @@ class_name Main_Peace
 
 @export var number_peace: int = 1
 
-var in_box = false
+@export var in_box = false # Está dentro de uma caixa
 var original_position: Vector2 
-var hold: bool = false
+@export var hold: bool = false # Está sendo segurado pelo cursor
 var Box_realtive: Box
 var tween_finish = false
 
@@ -70,5 +70,3 @@ func update_textures(sprite: Sprite2D, type: String, number_index: int):
 
 func finished_tween():
 	tween_finish = true
-
-	
