@@ -77,9 +77,7 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if not hold and event.is_pressed():
 			await get_tree().create_timer(1).timeout
-		print("Antiga entrada:", hold, " is pressed: ", event.is_pressed())
 		hold = event.is_pressed()
-		print("Novo valor:", hold)
 
 func update_textures(sprite: Sprite2D, type: String, number_index: int):
 	var image = Image.new()
