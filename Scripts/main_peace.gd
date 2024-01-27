@@ -6,8 +6,8 @@ class_name Main_Peace
 @export_enum("Scenario", "Character","Dialog") var t_type: String
 @export var number_peace: int = 1
 @export_group("Inputs Test")
-@export var in_box = false # Está dentro de uma caixa
-@export var hold: bool = false # Está sendo segurado pelo cursor
+var in_box: bool = false # Está dentro de uma caixa
+var hold: bool = false # Está sendo segurado pelo cursor
 
 var original_position: Vector2 
 var Box_realtive: Box
@@ -31,9 +31,6 @@ func _ready():
 	update_textures($Initial/Sprite2D, "p", number_peace)
 	
 func _physics_process(_delta: float):
-	#print("physics: ", hold)
-	if not in_box and global_position == original_position:
-		box_turn = true
 	if hold:
 		global_position = get_global_mouse_position()
 		$BoxImage.visible = false
@@ -55,8 +52,6 @@ func _physics_process(_delta: float):
 		else:
 			#global_position = Box_realtive.global_position
 			var my_tween = get_tree().create_tween()
-			tween_finish = false
-			my_tween.finished.connect(finished_tween)
 			my_tween.tween_property(self, "position", Box_realtive.global_position, 0.25).set_trans(Tween.TRANS_LINEAR)
 			$BoxImage.visible = true
 			$Initial.visible = false
@@ -86,8 +81,6 @@ func update_textures(sprite: Sprite2D, type: String, number_index: int):
 	t = ImageTexture.create_from_image(image)
 	sprite.texture = t
 
-func finished_tween():
-	tween_finish = true
 	
 func finished_home_tween():
 	box_turn = true
