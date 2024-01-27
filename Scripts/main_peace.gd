@@ -3,13 +3,14 @@ extends CharacterBody2D
 class_name Main_Peace
 
 @export var number_peace: int = 1
+@export var quant_box: int = 3 
 
 var in_box = false
 var original_position: Vector2 
 var hold: bool = false
 var Box_realtive: Box
 var tween_finish = false
-
+var box_turn: bool = true
 
 func _ready():
 	Joke.act_joke = 1
@@ -18,32 +19,35 @@ func _ready():
 	update_textures($Initial/Sprite2D, "p", number_peace)
 	
 func _physics_process(_delta: float):
-	
-	if not in_box:
-		if not hold:
+	if not in_box and global_position == original_position:
+		box_turn = true
+	if hold:
+		global_position = get_global_mouse_position()
+		$BoxImage.visible = false
+		$Initial.visible = true
+	else:
+		if in_box and not hold:
+			box_turn = true
+		else:
+			if not in_box and not hold:
+				box_turn = false
+		if not in_box:
 			var my_tween = get_tree().create_tween()
-			my_tween.finished.connect(finished_tween)
+			my_tween.finished.connect(finished_home_tween)
 			my_tween.tween_property(self, "position", original_position, 0.25).set_trans(Tween.TRANS_LINEAR)
 			#global_position = original_position
 			$BoxImage.visible = false
 			$Initial.visible = true
-	else:
-		if not hold:
+		else:
 			#global_position = Box_realtive.global_position
 			var my_tween = get_tree().create_tween()
 			tween_finish = false
 			my_tween.finished.connect(finished_tween)
 			my_tween.tween_property(self, "position", Box_realtive.global_position, 0.25).set_trans(Tween.TRANS_LINEAR)
-			$Initial.visible = false
 			$BoxImage.visible = true
-		else:
-			$Initial.visible = true
-			$BoxImage.visible = false
-	if hold:
-		global_position = get_global_mouse_position()
-	
+			$Initial.visible = false
 		
-	
+
 func grab(box: Box):
 	Box_realtive = box
 	update_textures($BoxImage, "b", Box_realtive.number_box)
@@ -70,5 +74,8 @@ func update_textures(sprite: Sprite2D, type: String, number_index: int):
 
 func finished_tween():
 	tween_finish = true
+	
+func finished_home_tween():
+	box_turn = true
 
 	
