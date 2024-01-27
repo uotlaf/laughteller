@@ -1,12 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://2dxyom3qpgna"]
+[gd_scene load_steps=4 format=3 uid="uid://2dxyom3qpgna"]
 
+[ext_resource type="Script" path="res://Scripts/test_spawner.gd" id="1_lyt8g"]
 [ext_resource type="PackedScene" uid="uid://b6yqq01d7375d" path="res://Scenes/box.tscn" id="1_ocrx1"]
-[ext_resource type="PackedScene" uid="uid://ba21nniksg3gd" path="res://Scenes/main_peace.tscn" id="2_3b7ju"]
+[ext_resource type="Script" path="res://Scripts/spwaner_2.gd" id="3_uha63"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Box" parent="." instance=ExtResource("1_ocrx1")]
-position = Vector2(393, 206)
+[node name="Box2" parent="." instance=ExtResource("1_ocrx1")]
+position = Vector2(351, 474)
 
-[node name="Peace" parent="." instance=ExtResource("2_3b7ju")]
-position = Vector2(618, 561)
+[node name="Box" parent="." instance=ExtResource("1_ocrx1")]
+position = Vector2(560, 175)
+
+[node name="Box3" parent="." instance=ExtResource("1_ocrx1")]
+position = Vector2(765, 475)
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(705, 709)
+script = ExtResource("1_lyt8g")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(991, 699)
+script = ExtResource("3_uha63")

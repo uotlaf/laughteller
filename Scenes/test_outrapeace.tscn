@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1c00t8nr8o5d"]
+
+[ext_resource type="PackedScene" uid="uid://ba21nniksg3gd" path="res://Scenes/main_peace.tscn" id="1_pufpp"]
+
+[sub_resource type="Gradient" id="Gradient_wxwdt"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4ko0s"]
+gradient = SubResource("Gradient_wxwdt")
+
+[node name="Peace" instance=ExtResource("1_pufpp")]
+
+[node name="BoxImage" parent="." index="1"]
+visible = true
+position = Vector2(-1.75, 0.375008)
+scale = Vector2(1.4707, 257.25)
+texture = SubResource("GradientTexture1D_4ko0s")

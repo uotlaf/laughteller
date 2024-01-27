@@ -1,28 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6yqq01d7375d"]
+[gd_scene load_steps=5 format=3 uid="uid://b6yqq01d7375d"]
 
 [ext_resource type="Script" path="res://Scripts/box.gd" id="1_mmlky"]
-
-[sub_resource type="Gradient" id="Gradient_eojy5"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_6loka"]
-gradient = SubResource("Gradient_eojy5")
-fill_from = Vector2(0.0688073, 0.114679)
-fill_to = Vector2(0.862385, 0.866973)
+[ext_resource type="Texture2D" uid="uid://yvt07urwml5t" path="res://Assets/Moldura_vazia.png" id="2_6kjnw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxeou"]
 size = Vector2(6.5, 6.5)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hv4f5"]
-radius = 106.0
-height = 212.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3pxbp"]
+radius = 53.0
+height = 106.0
 
 [node name="Box" type="CharacterBody2D"]
 script = ExtResource("1_mmlky")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-0.499994, -0.999994)
-scale = Vector2(3.32813, 3.28125)
-texture = SubResource("GradientTexture2D_6loka")
+scale = Vector2(2.75, 2.75)
+texture = ExtResource("2_6kjnw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_yxeou")
@@ -32,8 +25,8 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, -1)
-shape = SubResource("CapsuleShape2D_hv4f5")
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_3pxbp")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
