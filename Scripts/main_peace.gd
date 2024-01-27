@@ -9,7 +9,9 @@ func _physics_process(_delta: float):
 		if mouse_on:
 			global_position = get_global_mouse_position()
 
-
+func grab(box: Box):
+	global_position = box.global_position
+	
 func mouse_ent():
 	mouse_on = true
 
