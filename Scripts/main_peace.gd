@@ -11,8 +11,7 @@ var Box_realtive: Box
 
 func _ready():
 	Joke.act_joke = 1
-	update_textures($BoxImage)
-	update_textures($Sprite2D)
+	update_textures($BoxImage, "p")
 	$BoxImage.scale = Vector2(2.75, 2.75)
 	
 func _physics_process(_delta: float):
@@ -45,10 +44,14 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		hold = event.is_pressed()
 
-func update_textures(sprite: Sprite2D):
-	Joke.act_p += 1
+func update_textures(sprite: Sprite2D, type: String):
 	var image = Image.new()
-	image.load(Joke.jokes[str(Joke.act_joke)]["path_p"+str(Joke.act_p)])
+	if type == "p":
+		Joke.act_p += 1
+		image.load(Joke.jokes[str(Joke.act_joke)]["path_"+type+str(Joke.act_p)])
+	if type == "b":
+		Joke.act_b += 1
+		image.load(Joke.jokes[str(Joke.act_joke)]["path_"+type+str(Joke.act_b)])
 	var t = ImageTexture.new()
 	t = ImageTexture.create_from_image(image)
 	sprite.texture = t

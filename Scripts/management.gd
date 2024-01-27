@@ -2,6 +2,7 @@ extends Node
 
 var act_joke = 0
 var act_p = 0
+var act_b = 0
 
 const jokes: Dictionary = {
 	"1": {
