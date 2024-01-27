@@ -2,15 +2,13 @@ extends Node
 
 var act_joke = 0
 
-const jokes: Dictionary = {
-	"1": {
-		"nome": "Primeira Piada",
-		"p1": {
-			"path_p": "res://Assets/icon.svg",
-			"path_b1": "res://Assets/Moldura_vazia.png",
-			"path_b2": "res://Assets/icon.svg",
-			"path_b3": "res://Assets/cursor.png"
-		}
-		
-	}
-}
+const jokes_json_path : String = "res://Assets/Jokes/info.json"
+
+var jokes: Dictionary 
+
+func _ready():
+	var file = FileAccess.open(jokes_json_path, FileAccess.READ)
+	assert(file)
+	var json = JSON.new()
+	assert(json.parse(file.get_as_text()) == OK)
+	jokes = json.data
