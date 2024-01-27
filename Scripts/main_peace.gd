@@ -5,9 +5,9 @@ class_name Main_Peace
 @export var number_peace: int = 1
 @export var quant_box: int = 3 
 
-var in_box = false
+@export var in_box = false # Está dentro de uma caixa
 var original_position: Vector2 
-var hold: bool = false
+@export var hold: bool = false # Está sendo segurado pelo cursor
 var Box_realtive: Box
 var tween_finish = false
 var box_turn: bool = true
