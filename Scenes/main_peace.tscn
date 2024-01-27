@@ -28,15 +28,15 @@ texture = ExtResource("2_yppkw")
 [node name="BoxImage" type="Sprite2D" parent="."]
 scale = Vector2(2.38333, 2.425)
 
-[node name="Collision_" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_p0mt1")
 
 [node name="Detector" type="Area2D" parent="."]
 collision_layer = 16
 collision_mask = 0
 
-[node name="Detector_colisor" type="CollisionShape2D" parent="Detector"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_8scxw")
 debug_color = Color(0.588235, 0.517647, 0.517647, 0.419608)
 
-[connection signal="input_event" from="Detector" to="." method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
