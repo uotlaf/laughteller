@@ -68,7 +68,7 @@ func update_textures(sprite: Sprite2D, type: String, number_index: int):
 		image.load(Joke.jokes[str(Joke.act_joke)][type+str(number_peace)][type])
 	if type == "b":
 		image.load(Joke.jokes[str(Joke.act_joke)]["p"+str(number_peace)][type+str(number_index)])
-
+		print(Joke.jokes[str(Joke.act_joke)]["p"+str(number_peace)][type+str(number_index)])
 	var t = ImageTexture.new()
 	t = ImageTexture.create_from_image(image)
 	sprite.texture = t
