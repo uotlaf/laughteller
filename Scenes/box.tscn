@@ -7,8 +7,8 @@
 size = Vector2(6.5, 6.5)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3pxbp"]
-radius = 84.0
-height = 270.0
+radius = 65.0
+height = 244.0
 
 [node name="Box" type="CharacterBody2D"]
 script = ExtResource("1_mmlky")
