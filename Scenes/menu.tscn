@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://r7htcafwr30y"]
+[gd_scene load_steps=5 format=3 uid="uid://flt2u5myfsu7"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_cs1ej"]
 [ext_resource type="Texture2D" uid="uid://bjcnydq0k2hdf" path="res://Assets/UI/shrek_book.png" id="2_wr58g"]

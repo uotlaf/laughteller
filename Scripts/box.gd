@@ -7,7 +7,7 @@ var object_list: Array[CharacterBody2D] = [] # Bloco que está sendo segurado
 var type_list: Array[String] = []
 
 func _on_area_2d_body_entered(body):
-
+	
 	if body is Main_Peace:	
 		if not type_list.has(body.t_type):
 			#FAZER ISSO SE O TIPO NÃO EXISTIR DENTRO DA BOX
@@ -18,7 +18,7 @@ func _on_area_2d_body_entered(body):
 				body.in_box = true
 				object_list.append(body)
 				type_list.append(body.t_type)
-
+	#print(str(number_box) + type_list)
 func _on_area_2d_body_exited(body):
 	# Corpo está sendo segurado pelo cursor e é o que está sendo segurado pela caixa
 	#FUNCIONA PARA UM OBJETO DENTRO DA BOX, MAS PARA MAIS DELES, FUNCIONA?
