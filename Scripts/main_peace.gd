@@ -72,8 +72,8 @@ func ungrab():
 	in_box = false
 	
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		hold = event.is_pressed()
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
+		hold = !hold
 
 func update_textures(sprite: Sprite2D, type: String, number_index: int):
 	var image = Image.new()
