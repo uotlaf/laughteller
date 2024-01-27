@@ -1,24 +1,38 @@
 extends CharacterBody2D
 
 class_name Box
-var has_grabbed: bool = false
+#var has_grabbed: bool = false
 
 @export var number_box : int = 1
-var object : CharacterBody2D # Bloco que está sendo segurado
+var object_list: Array[CharacterBody2D] = [] # Bloco que está sendo segurado
+var type_list: Array[String] = []
+var has_same_type: bool = false
 
 func _on_area_2d_body_entered(body):
-	if body is Main_Peace:
-		if body.box_turn and not has_grabbed:
-			has_grabbed = true
-			object = body
-			body.grab(self)
-			
-	# Corpo está sendo segurado pelo cursor e não tem um expandido
-	
+
+	if body is Main_Peace:	
+		if not type_list.has(body.type):
+			#FAZER ISSO SE O TIPO NÃO EXISTIR DENTRO DA BOX
+			if body.box_turn: #and not has_grabbed:
+				#SE AS CONDIÇÕES SÃO OBEDECIDAS ENTÃO É GRABADO
+				#has_grabbed = true
+				body.grab(self)
+				object_list.append(body)
+				type_list.append(body.type)
+
 func _on_area_2d_body_exited(body):
 	# Corpo está sendo segurado pelo cursor e é o que está sendo segurado pela caixa
-	if body is Main_Peace and body.hold and body == object:
-		has_grabbed = false
+	#FUNCIONA PARA UM OBJETO DENTRO DA BOX, MAS PARA MAIS DELES, FUNCIONA?
+	#vejamos: Não, pois só guardamos o primeiro objeto que entrou na Box em object.
+	#Podemos criar uma Lista para armazenar os objetos q estao dentro da box.
+	#AGORA, EM VEZ DE VERIFICAR SÓ UM OBEJTOS VERIFCAMOS SE QUAL OBJETO ESTA SAINDO DA BOX PARA RETIRARMOS SEU TIPO do TYPELIST
+	if body is Main_Peace and body.hold and object_list.has(body):
+		#has_grabbed = false
 		body.ungrab()
-		object = null
+		type_list.remove_at(type_list.find(body.type))
+		object_list.remove_at((object_list.find(body)))
 		
+
+func _physics_process(_delta: float) -> void:
+	print(type_list) 	
+

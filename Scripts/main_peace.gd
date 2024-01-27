@@ -2,12 +2,14 @@ extends CharacterBody2D
 
 class_name Main_Peace
 
+@export_category("Configs")
+@export_enum("Scenario", "Character","Dialog") var type: String
 @export var number_peace: int = 1
-@export var quant_box: int = 3 
-
+@export_group("Inputs Test")
 @export var in_box = false # Está dentro de uma caixa
-var original_position: Vector2 
 @export var hold: bool = false # Está sendo segurado pelo cursor
+
+var original_position: Vector2 
 var Box_realtive: Box
 var tween_finish = false
 var box_turn: bool = true
@@ -15,7 +17,17 @@ var box_turn: bool = true
 func _ready():
 	Joke.act_joke = 1
 	original_position = global_position
+	
+	match type:
+		"Scenario":
+			$Initial/Background.texture = preload("res://Assets/Pieces/scenary_piece.png")
+		#"Character":
+			#$Initial/Background.texture = preload("res://Assets/Pieces/character_piece.png")
+		#"Dialog":
+			#$Initial/Background.texture = preload("res://Assets/Pieces/dialog_piece.png") 
+		
 	$BoxImage.scale = Vector2(2.75, 2.75)
+	
 	update_textures($Initial/Sprite2D, "p", number_peace)
 	
 func _physics_process(_delta: float):

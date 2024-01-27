@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://ba21nniksg3gd"]
+[gd_scene load_steps=4 format=3 uid="uid://ba21nniksg3gd"]
 
 [ext_resource type="Script" path="res://Scripts/main_peace.gd" id="1_jhl61"]
-[ext_resource type="Texture2D" uid="uid://bg8jurvxnh5g" path="res://Assets/bloco.png" id="2_yppkw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p0mt1"]
 radius = 39.5
@@ -21,7 +20,6 @@ script = ExtResource("1_jhl61")
 
 [node name="Background" type="Sprite2D" parent="Initial"]
 scale = Vector2(2, 2)
-texture = ExtResource("2_yppkw")
 
 [node name="Sprite2D" type="Sprite2D" parent="Initial"]
 
