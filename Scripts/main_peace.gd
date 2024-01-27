@@ -30,7 +30,6 @@ func grab(box: Box):
 func ungrab():
 	in_box = false
 	
-
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-			hold = event.is_pressed()
+		hold = event.is_pressed()
