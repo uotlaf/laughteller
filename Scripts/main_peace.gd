@@ -9,6 +9,9 @@ class_name Main_Peace
 var in_box: bool = false # Está dentro de uma caixa
 var hold: bool = false # Está sendo segurado pelo cursor
 
+var cursor_images : Array = ["res://Assets/UI/cursor.png", 
+							 "res://Assets/UI/cursor_holding.png"]
+
 var original_position: Vector2 
 var Box_realtive: Box
 var tween_finish = false
@@ -69,6 +72,7 @@ func ungrab():
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
 		hold = !hold
+		Input.set_custom_mouse_cursor(load(cursor_images[int(hold)]))
 
 func update_textures(sprite: Sprite2D, type: String, number_index: int):
 	var image = Image.new()
