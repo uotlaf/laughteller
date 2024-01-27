@@ -24,7 +24,8 @@ Joke="*res://Scripts/management.gd"
 window/size/viewport_width=1200
 window/size/viewport_height=720
 window/stretch/mode="viewport"
-mouse_cursor/custom_image="res://Assets/cursor.png"
+mouse_cursor/custom_image="res://Assets/UI/cursor.png"
+<<<<<<<HEADwindow/size/viewport_height=800
 
 [input]
 
