@@ -15,10 +15,15 @@ run/main_scene="res://Scenes/main_peace.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
 
+[autoload]
+
+Joke="*res://Scripts/management.gd"
+
 [display]
 
 window/size/viewport_width=1200
 window/size/viewport_height=800
+mouse_cursor/custom_image="res://Assets/cursor.png"
 
 [input]
 
