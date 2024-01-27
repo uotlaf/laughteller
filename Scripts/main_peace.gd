@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 class_name Main_Peace
 
-var n_joke: int = 0
 var in_box = false
 var original_position: Vector2 
 var hold: bool = false
@@ -11,8 +10,11 @@ var Box_realtive: Box
 
 
 func _ready():
-	$BoxImage.texture = preload("res://Assets/Moldura_vazia.png")
+	Joke.act_joke = 1
+	update_textures($BoxImage)
+	update_textures($Sprite2D)
 	$BoxImage.scale = Vector2(2.75, 2.75)
+	
 func _physics_process(_delta: float):
 	if not in_box:
 		global_position = original_position
@@ -42,3 +44,12 @@ func ungrab():
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		hold = event.is_pressed()
+
+func update_textures(sprite: Sprite2D):
+	Joke.act_p += 1
+	var image = Image.new()
+	image.load(Joke.jokes[str(Joke.act_joke)]["path_p"+str(Joke.act_p)])
+	var t = ImageTexture.new()
+	t = ImageTexture.create_from_image(image)
+	sprite.texture = t
+	
