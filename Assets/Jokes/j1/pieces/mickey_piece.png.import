@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl4ypvsoq6ylf"
-path="res://.godot/imported/border_frame.png-fbcc5cecc6530a3634c29e211da40be9.ctex"
+uid="uid://dc2jleamqoef7"
+path="res://.godot/imported/mickey_piece.png-387ab11f0a1df2ba8e4892dc7eca399d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Frames/border_frame.png"
-dest_files=["res://.godot/imported/border_frame.png-fbcc5cecc6530a3634c29e211da40be9.ctex"]
+source_file="res://Assets/Jokes/j1/pieces/mickey_piece.png"
+dest_files=["res://.godot/imported/mickey_piece.png-387ab11f0a1df2ba8e4892dc7eca399d.ctex"]
 
 [params]
 

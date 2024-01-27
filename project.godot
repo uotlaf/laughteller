@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GGJ2023"
-run/main_scene="res://Scenes/main_peace.tscn"
+run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
 
@@ -22,8 +22,14 @@ Joke="*res://Scripts/management.gd"
 [display]
 
 window/size/viewport_width=1200
+<<<<<<< HEAD
 window/size/viewport_height=800
 mouse_cursor/custom_image="res://Assets/UI/cursor.png"
+=======
+window/size/viewport_height=720
+window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://Assets/cursor.png"
+>>>>>>> b8c01e3 (Fullscreen mode)
 
 [input]
 

@@ -7,5 +7,14 @@
 	  "b3": "res://Assets/Jokes/j1/cursor.png",
 	  "p":  "res://Assets/Jokes/j1/cursor.png"
 	}
+  },
+  "2": {
+	"nome": "Segunda Piada",
+	"p1": {
+	  "b1": "res://Assets/j1/icon.svg",
+	  "b2": "res://Assets/j1/Moldura_vazia.png",
+	  "b3": "res://Assets/j1/cursor.png",
+	  "p":  "res://Assets/j1/cursor.png"
+	}
   }
 }

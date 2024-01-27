@@ -1,6 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://ba21nniksg3gd"]
 
 [ext_resource type="Script" path="res://Scripts/main_peace.gd" id="1_jhl61"]
+<<<<<<< HEAD
+=======
+[ext_resource type="Texture2D" path="res://Assets/bloco.png" id="2_yppkw"]
+>>>>>>> b8c01e3 (Fullscreen mode)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p0mt1"]
 radius = 39.5
