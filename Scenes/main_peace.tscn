@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://ba21nniksg3gd"]
+
+[ext_resource type="Texture2D" uid="uid://vcq81uoiyujw" path="res://Assets/icon.svg" id="1_gnncu"]
+[ext_resource type="Script" path="res://Scripts/main_peace.gd" id="1_jhl61"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8fefw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5jif"]
+size = Vector2(120, 120)
+
+[node name="Peace" type="CharacterBody2D"]
+script = ExtResource("1_jhl61")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gnncu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8fefw")
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_t5jif")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="mouse_ent"]
+[connection signal="mouse_exited" from="Area2D" to="." method="mouse_ext"]
