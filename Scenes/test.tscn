@@ -1,34 +1,23 @@
 [gd_scene load_steps=3 format=3 uid="uid://2dxyom3qpgna"]
 
 [ext_resource type="PackedScene" uid="uid://b6yqq01d7375d" path="res://Scenes/box.tscn" id="1_ocrx1"]
-
-[sub_resource type="GDScript" id="GDScript_y64d7"]
-script/source = "
-extends Marker2D
-
-const PEACE: PackedScene = preload(\"res://Scenes/main_peace.tscn\")
-
-func _ready():
-	var peace = PEACE.instantiate()
-	peace.original_position = global_position
-	get_parent().call_deferred(\"add_child\", peace)
-"
+[ext_resource type="PackedScene" uid="uid://ba21nniksg3gd" path="res://Scenes/main_peace.tscn" id="2_hwc33"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Box2" parent="." instance=ExtResource("1_ocrx1")]
 position = Vector2(351, 474)
+number_box = 3
 
 [node name="Box" parent="." instance=ExtResource("1_ocrx1")]
 position = Vector2(560, 175)
 
 [node name="Box3" parent="." instance=ExtResource("1_ocrx1")]
 position = Vector2(765, 475)
+number_box = 2
 
-[node name="Marker2D2" type="Marker2D" parent="."]
-position = Vector2(579, 695)
-script = SubResource("GDScript_y64d7")
+[node name="Peace4" parent="." instance=ExtResource("2_hwc33")]
+position = Vector2(454, 696)
 
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(991, 699)
-script = SubResource("GDScript_y64d7")
+[node name="Peace3" parent="." instance=ExtResource("2_hwc33")]
+position = Vector2(241, 697)
