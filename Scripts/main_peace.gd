@@ -15,21 +15,21 @@ func _ready():
 	Joke.act_joke = 1
 	original_position = global_position
 	$BoxImage.scale = Vector2(2.75, 2.75)
-	update_textures($Sprite2D, "p", number_peace)
+	update_textures($Initial/Sprite2D, "p", number_peace)
 	
 	
 func _physics_process(_delta: float):
 	if not in_box:
 		global_position = original_position
 		$BoxImage.visible = false
-		$Sprite2D.visible = true
+		$Initial.visible = true
 	else:
 		global_position = Box_realtive.global_position
 		if not hold:
-			$Sprite2D.visible = false
+			$Initial.visible = false
 			$BoxImage.visible = true
 		else:
-			$Sprite2D.visible = true
+			$Initial.visible = true
 			$BoxImage.visible = false
 	if hold:
 		global_position = get_global_mouse_position()

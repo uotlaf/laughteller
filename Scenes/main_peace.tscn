@@ -1,33 +1,40 @@
 [gd_scene load_steps=5 format=3 uid="uid://ba21nniksg3gd"]
 
-[ext_resource type="Texture2D" uid="uid://vcq81uoiyujw" path="res://Assets/icon.svg" id="1_gnncu"]
 [ext_resource type="Script" path="res://Scripts/main_peace.gd" id="1_jhl61"]
+[ext_resource type="Texture2D" uid="uid://bg8jurvxnh5g" path="res://Assets/bloco.png" id="2_yppkw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8fefw"]
-size = Vector2(96, 99)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p0mt1"]
+radius = 39.5
+height = 128.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5jif"]
-size = Vector2(97, 99)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8scxw"]
+radius = 40.0
+height = 128.0
 
 [node name="Peace" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_jhl61")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_gnncu")
+[node name="Initial" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Initial"]
+scale = Vector2(2, 2)
+texture = ExtResource("2_yppkw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Initial"]
 
 [node name="BoxImage" type="Sprite2D" parent="."]
 scale = Vector2(2.38333, 2.425)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_8fefw")
+shape = SubResource("CapsuleShape2D_p0mt1")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_t5jif")
+shape = SubResource("CapsuleShape2D_8scxw")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
