@@ -1,24 +1,22 @@
 extends CharacterBody2D
 
 class_name Box
-#var has_grabbed: bool = false
 
 @export var number_box : int = 1
 var object_list: Array[CharacterBody2D] = [] # Bloco que está sendo segurado
 var type_list: Array[String] = []
-var has_same_type: bool = false
 
 func _on_area_2d_body_entered(body):
 
 	if body is Main_Peace:	
-		if not type_list.has(body.type):
+		if not type_list.has(body.t_type):
 			#FAZER ISSO SE O TIPO NÃO EXISTIR DENTRO DA BOX
 			if body.box_turn: #and not has_grabbed:
 				#SE AS CONDIÇÕES SÃO OBEDECIDAS ENTÃO É GRABADO
 				#has_grabbed = true
 				body.grab(self)
 				object_list.append(body)
-				type_list.append(body.type)
+				type_list.append(body.t_type)
 
 func _on_area_2d_body_exited(body):
 	# Corpo está sendo segurado pelo cursor e é o que está sendo segurado pela caixa
@@ -29,10 +27,8 @@ func _on_area_2d_body_exited(body):
 	if body is Main_Peace and body.hold and object_list.has(body):
 		#has_grabbed = false
 		body.ungrab()
-		type_list.remove_at(type_list.find(body.type))
+		type_list.remove_at(type_list.find(body.t_type))
 		object_list.remove_at((object_list.find(body)))
 		
 
-func _physics_process(_delta: float) -> void:
-	print(type_list) 	
 

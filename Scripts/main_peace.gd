@@ -3,7 +3,7 @@ extends CharacterBody2D
 class_name Main_Peace
 
 @export_category("Configs")
-@export_enum("Scenario", "Character","Dialog") var type: String
+@export_enum("Scenario", "Character","Dialog") var t_type: String
 @export var number_peace: int = 1
 @export_group("Inputs Test")
 @export var in_box = false # Está dentro de uma caixa
@@ -18,13 +18,13 @@ func _ready():
 	Joke.act_joke = 1
 	original_position = global_position
 	
-	match type:
+	match t_type:
 		"Scenario":
 			$Initial/Background.texture = preload("res://Assets/Pieces/scenary_piece.png")
 		#"Character":
-			#$Initial/Background.texture = preload("res://Assets/Pieces/character_piece.png")
-		#"Dialog":
-			#$Initial/Background.texture = preload("res://Assets/Pieces/dialog_piece.png") 
+			#$Initial/Background.texture = preload("res://Assets/Jokes/j1/pieces/mickey_piece.png")
+		"Dialog":
+			$Initial/Background.texture = preload("res://Assets/Pieces/dialog_piece.png") 
 		
 	$BoxImage.scale = Vector2(2.75, 2.75)
 	
@@ -72,11 +72,7 @@ func ungrab():
 	in_box = false
 	
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
-	if event is InputEventMouseButton:
-		print(event)
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if not hold and event.is_pressed():
-			await get_tree().create_timer(1).timeout
 		hold = event.is_pressed()
 
 func update_textures(sprite: Sprite2D, type: String, number_index: int):
