@@ -32,12 +32,13 @@ func _physics_process(_delta: float):
 			if not in_box and not hold:
 				box_turn = false
 		if not in_box:
+			$BoxImage.visible = false
+			$Initial.visible = true
 			var my_tween = get_tree().create_tween()
 			my_tween.finished.connect(finished_home_tween)
 			my_tween.tween_property(self, "position", original_position, 0.25).set_trans(Tween.TRANS_LINEAR)
 			#global_position = original_position
-			$BoxImage.visible = false
-			$Initial.visible = true
+					
 		else:
 			#global_position = Box_realtive.global_position
 			var my_tween = get_tree().create_tween()
@@ -46,7 +47,7 @@ func _physics_process(_delta: float):
 			my_tween.tween_property(self, "position", Box_realtive.global_position, 0.25).set_trans(Tween.TRANS_LINEAR)
 			$BoxImage.visible = true
 			$Initial.visible = false
-		
+			
 
 func grab(box: Box):
 	Box_realtive = box

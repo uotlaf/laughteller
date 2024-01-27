@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://2dxyom3qpgna"]
 
 [ext_resource type="PackedScene" uid="uid://b6yqq01d7375d" path="res://Scenes/box.tscn" id="1_ocrx1"]
-[ext_resource type="Texture2D" uid="uid://drdjunytrjgal" path="res://Assets/página.png" id="1_vardg"]
+[ext_resource type="Texture2D" uid="uid://dxkybjhdv2ur7" path="res://Assets/página.png" id="1_vardg"]
 [ext_resource type="PackedScene" uid="uid://ba21nniksg3gd" path="res://Scenes/main_peace.tscn" id="2_hwc33"]
 [ext_resource type="Shader" path="res://Shaders/balance.gdshader" id="4_atnkn"]
 
@@ -31,9 +31,17 @@ position = Vector2(560, 175)
 position = Vector2(765, 475)
 number_box = 2
 
+[node name="Peace5" parent="." instance=ExtResource("2_hwc33")]
+material = SubResource("ShaderMaterial_7cv6s")
+position = Vector2(668, 686)
+
 [node name="Peace4" parent="." instance=ExtResource("2_hwc33")]
 material = SubResource("ShaderMaterial_7cv6s")
-position = Vector2(470, 698)
+position = Vector2(460, 692)
 
 [node name="Peace3" parent="." instance=ExtResource("2_hwc33")]
 position = Vector2(241, 697)
+
+[node name="Peace6" parent="." instance=ExtResource("2_hwc33")]
+material = SubResource("ShaderMaterial_7cv6s")
+position = Vector2(876, 680)
