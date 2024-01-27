@@ -15,6 +15,7 @@ func _on_area_2d_body_entered(body):
 				#SE AS CONDIÇÕES SÃO OBEDECIDAS ENTÃO É GRABADO
 				#has_grabbed = true
 				body.grab(self)
+				body.in_box = true
 				object_list.append(body)
 				type_list.append(body.t_type)
 
@@ -27,6 +28,7 @@ func _on_area_2d_body_exited(body):
 	if body is Main_Peace and body.hold and object_list.has(body):
 		#has_grabbed = false
 		body.ungrab()
+		body.in_box = false
 		type_list.remove_at(type_list.find(body.t_type))
 		object_list.remove_at((object_list.find(body)))
 		

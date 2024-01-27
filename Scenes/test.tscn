@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://2dxyom3qpgna"]
 
-[ext_resource type="Texture2D" uid="uid://behpk7m87ls87" path="res://Assets/Pages/background_page.png" id="1_eidlw"]
+[ext_resource type="Texture2D" uid="uid://dl41abnvuxh72" path="res://Assets/Pages/background_page.png" id="1_eidlw"]
 [ext_resource type="PackedScene" uid="uid://b6yqq01d7375d" path="res://Scenes/box.tscn" id="1_ocrx1"]
 [ext_resource type="PackedScene" uid="uid://ba21nniksg3gd" path="res://Scenes/main_peace.tscn" id="2_hwc33"]
 [ext_resource type="Shader" path="res://Shaders/balance.gdshader" id="4_atnkn"]
@@ -34,28 +34,28 @@ number_box = 2
 [node name="Peace5" parent="." instance=ExtResource("2_hwc33")]
 material = SubResource("ShaderMaterial_7cv6s")
 position = Vector2(654, 674)
-t_type = "Character"
+t_type = "Scenario"
 
 [node name="Peace4" parent="." instance=ExtResource("2_hwc33")]
 material = SubResource("ShaderMaterial_7cv6s")
 position = Vector2(460, 692)
-t_type = "Scenario"
+t_type = "Character"
 
 [node name="Peace3" parent="." instance=ExtResource("2_hwc33")]
 position = Vector2(241, 697)
-t_type = "Dialog"
+t_type = "Character"
 
 [node name="Peace6" parent="." instance=ExtResource("2_hwc33")]
 material = SubResource("ShaderMaterial_7cv6s")
 position = Vector2(846, 684)
-t_type = "Character"
+t_type = "Scenario"
 
 [node name="Peace7" parent="." instance=ExtResource("2_hwc33")]
 material = SubResource("ShaderMaterial_7cv6s")
 position = Vector2(1041, 690)
-t_type = "Character"
+t_type = "Dialog"
 
 [node name="Peace8" parent="." instance=ExtResource("2_hwc33")]
 material = SubResource("ShaderMaterial_7cv6s")
 position = Vector2(848, 217)
-t_type = "Scenario"
+t_type = "Dialog"
