@@ -17,7 +17,7 @@ config/icon="res://Assets/icon.svg"
 
 [autoload]
 
-Managenment="*res://Scripts/management.gd"
+Management="*res://Scripts/management.gd"
 
 [display]
 

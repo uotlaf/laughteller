@@ -1,12 +1,22 @@
 extends Control
 
-if()
+@onready var button_pt:TextureButton = get_node("Languages/Portugues");
+@onready var button_en:TextureButton = get_node("Languages/English");
+
+func _ready():
+	prints(button_pt);
+	if(Management.current_language==0):
+		button_pt.button_pressed=true;
+	elif(Management.current_language==1):
+		button_en.button_pressed=true;
 
 func _on_back_pressed():
 	get_tree().change_scene_to_file("res://Scenes/menu.tscn");
 
 func _on_portugues_toggled(toggled_on):
-	Joke.load_language(0);
+	Management.load_language(0);
+	print(Management.current_language);
 
 func _on_english_toggled(toggled_on):
-	Joke.load_language(1);
+	Management.load_language(1);
+	print(Management.current_language);

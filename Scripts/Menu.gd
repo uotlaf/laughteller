@@ -1,20 +1,20 @@
 extends Control
 
-#var new_game_button:Button = find_node("NewGame");
-#@export var options_button:Button = null #get_tree().get_root().GetNode("Options");
-#@export var quit_button:Button = null #get_tree().get_root().GetNode("Quit");
+@onready var new_game_button:Button = get_node("MarginContainer/VBoxContainer/NewGame");
+@onready var options_button:Button = get_node("MarginContainer/VBoxContainer/Options");
+@onready var quit_button:Button = get_node("MarginContainer/VBoxContainer/Quit");
 
 func _ready():
-	if(Joke.current_language==0):
-		#new_game_button.text = "Jogar"
-		#options_button.text = "Opções"
-		#quit_button.text = "Sair"
+	if(Management.current_language==0):
+		new_game_button.text = "Jogar"
+		options_button.text = "Opções"
+		quit_button.text = "Sair"
 		pass;
 		
-	elif(Joke.current_language==1):
-		#new_game_button.text = "New game"
-		#options_button.text = "Options"
-		#quit_button.text = "Quit"
+	elif(Management.current_language==1):
+		new_game_button.text = "New game"
+		options_button.text = "Options"
+		quit_button.text = "Quit"
 		pass;
 
 func _on_new_game_pressed():

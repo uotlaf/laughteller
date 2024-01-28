@@ -17,7 +17,7 @@ var Box_realtive: Box
 var box_turn: bool = true
 
 func _ready():
-	Managenment.act_joke = 1
+	Management.act_joke = 1
 	original_position = global_position
 	
 	match t_type:
