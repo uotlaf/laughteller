@@ -13,8 +13,12 @@ var number_positions:int = 0
 var n_lines: int = 0
 var n_coluns: int = 0
 
+@onready var frases : Array = [get_node("TextureRect/Box_1/Box/frase1"), get_node("TextureRect/Box_2/Box/frase2"), get_node("TextureRect/Box_3/Box/frase3")]
+@onready var return_to_menu : Button = get_node("menu")
+
 func _ready():
-	
+	print(frases)
+	print(return_to_menu)
 	#COLOCAR AS DUAS FUNÇÕES AQUI
 	#PRIMEIRO A DIA DECIDIR AS POSIÇÕES DAS PEÇAS
 	#SEGUNDO A FUNÇÃO QUE CRIAS AS PEÇAS DE ACORDO COM JSON E NAS POSIÇÕES CORRETAS
@@ -51,3 +55,5 @@ func instance_peace():
 			call_deferred("add_child", peace)
 			jk += 1
 
+func _process(delta):
+	return_to_menu.visible = frases[0].visible and frases[1].visible and frases[2].visible

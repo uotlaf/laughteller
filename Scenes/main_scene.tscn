@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://rcrx584wndhs"]
+[gd_scene load_steps=12 format=3 uid="uid://rcrx584wndhs"]
 
 [ext_resource type="Texture2D" uid="uid://dl41abnvuxh72" path="res://Assets/Pages/background_page.png" id="1_d0u3t"]
 [ext_resource type="Script" path="res://Scripts/main_scene.gd" id="1_oagq7"]
@@ -6,6 +6,8 @@
 [ext_resource type="Shader" path="res://Shaders/balance.gdshader" id="3_5lfsx"]
 [ext_resource type="Texture2D" uid="uid://b33axsix3dsej" path="res://Assets/Pages/greek_comedy.png" id="3_l1pah"]
 [ext_resource type="Texture2D" uid="uid://dtttg0elv6ig4" path="res://Assets/Pages/kind_laugh_2.png" id="5_4oomw"]
+[ext_resource type="FontFile" uid="uid://bvp8t12cj2eml" path="res://Assets/Fonts/CuteFont-Regular.ttf" id="7_g58dt"]
+[ext_resource type="Script" path="res://Scenes/return_to_menu.gd" id="8_piw7g"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kygoa"]
 shader = ExtResource("3_5lfsx")
@@ -24,6 +26,9 @@ shader_parameter/scale_multiplicator_v = 4.0
 shader_parameter/time_multiplicator_h = 2.0
 shader_parameter/scale_multiplicator_h = 2.0
 shader_parameter/height = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70vfa"]
+bg_color = Color(0.894118, 0.639216, 0.443137, 1)
 
 [node name="MAIN_JOKE" type="Node2D"]
 script = ExtResource("1_oagq7")
@@ -53,11 +58,37 @@ scale = Vector2(1, 1.11111)
 [node name="Box" parent="TextureRect/Box_1" instance=ExtResource("2_mujhs")]
 number_box = 0
 
+[node name="frase1" type="RichTextLabel" parent="TextureRect/Box_1/Box"]
+visible = false
+offset_left = -150.0
+offset_top = 100.0
+offset_right = 150.0
+offset_bottom = 212.0
+theme_override_colors/default_color = Color(0.329412, 0.152941, 0.188235, 1)
+theme_override_fonts/normal_font = ExtResource("7_g58dt")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center]Tá vendo aquela lua que brilha lá no céu?"
+scroll_active = false
+
 [node name="Box_2" type="Marker2D" parent="TextureRect"]
 position = Vector2(600, 330)
 scale = Vector2(1, 1.11111)
 
 [node name="Box" parent="TextureRect/Box_2" instance=ExtResource("2_mujhs")]
+
+[node name="frase2" type="RichTextLabel" parent="TextureRect/Box_2/Box"]
+visible = false
+offset_left = -151.0
+offset_top = 99.1001
+offset_right = 149.0
+offset_bottom = 211.1
+theme_override_colors/default_color = Color(0.329412, 0.152941, 0.188235, 1)
+theme_override_fonts/normal_font = ExtResource("7_g58dt")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center]Se você me pedir..."
+scroll_active = false
 
 [node name="Box_3" type="Marker2D" parent="TextureRect"]
 position = Vector2(950, 330)
@@ -65,3 +96,31 @@ scale = Vector2(1, 1.11111)
 
 [node name="Box" parent="TextureRect/Box_3" instance=ExtResource("2_mujhs")]
 number_box = 2
+
+[node name="frase3" type="RichTextLabel" parent="TextureRect/Box_3/Box"]
+visible = false
+offset_left = -150.0
+offset_top = 98.2001
+offset_right = 150.0
+offset_bottom = 210.2
+theme_override_colors/default_color = Color(0.329412, 0.152941, 0.188235, 1)
+theme_override_fonts/normal_font = ExtResource("7_g58dt")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center]Eu comi, fui moleque"
+scroll_active = false
+
+[node name="menu" type="Button" parent="."]
+visible = false
+offset_left = 435.0
+offset_top = 593.0
+offset_right = 794.0
+offset_bottom = 654.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_g58dt")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_70vfa")
+text = "Voltar ao menu principal"
+script = ExtResource("8_piw7g")
+
+[connection signal="pressed" from="menu" to="menu" method="_on_pressed"]
