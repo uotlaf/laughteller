@@ -46,8 +46,7 @@ func find_combination():
 	if (object_ordered["2"]):
 		current_path = current_path.child["2"]
 	
-	var image = Image.new()
-	image.load(current_path.image)
+	var image = load(current_path.image).get_image()
 	var t = ImageTexture.new()
 	t = ImageTexture.create_from_image(image)
 	$Sprite/BACK_GROUND.texture = t

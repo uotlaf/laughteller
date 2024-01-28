@@ -76,8 +76,7 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 		Input.set_custom_mouse_cursor(load(cursor_images[int(hold)]))
 
 func update_texture(path: String):
-	var image = Image.new()
-	image.load(path)
+	var image = load(path).get_image()
 	var t = ImageTexture.new()
 	t = ImageTexture.create_from_image(image)
 	$Initial/Sprite2D.texture = t
