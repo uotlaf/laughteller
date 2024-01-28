@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://flt2u5myfsu7"]
+[gd_scene load_steps=6 format=3 uid="uid://flt2u5myfsu7"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_cs1ej"]
 [ext_resource type="Texture2D" uid="uid://bjcnydq0k2hdf" path="res://Assets/UI/shrek_book.png" id="2_wr58g"]
 [ext_resource type="Texture2D" uid="uid://dueadjkhycn7p" path="res://Assets/UI/storyteller_logo.png" id="2_x81pp"]
+[ext_resource type="FontFile" uid="uid://bvp8t12cj2eml" path="res://Assets/Fonts/CuteFont-Regular.ttf" id="3_ksvb8"]
 [ext_resource type="AudioStream" uid="uid://cwe5el0tmxdc2" path="res://Assets/Music/menu_theme.mp3" id="4_r2112"]
 
 [node name="Menu" type="Control"]
@@ -34,14 +35,17 @@ layout_mode = 2
 
 [node name="NewGame" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ksvb8")
 text = "Jogar"
 
 [node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ksvb8")
 text = "Opções"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ksvb8")
 text = "Sair"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
