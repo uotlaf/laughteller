@@ -1,162 +1,162 @@
 {
-  "chapters": {
-	"0": {
-	  "name": "Piadas ruins",
-	  "jokes": {
-		"0": {
-		  "name": "1. Aquele rato que entrou em domínio público",
-		  "n_blocks": 3,
-		  "n_pieces": 5,
-		  "n_types" : 4,
-		  "audio_end": "res://Assets/Jokes/j1/audio.wav",
-		  "blocks": {
-			"0": {
-			  "base": "res://Assets/Jokes/j1/Frames/first_frame/base.png",
-			  "combinations": {
-				"0": {
-				  "image": "res://Assets/Jokes/j1/Frames/first_frame/scenary_no_mickey.png",
-				  "child": {
-					"1": {
-					  "image": "res://Assets/Jokes/j1/Frames/first_frame/mickey_with_scenary.png",
-					  "child" : {
-						"2" : {
-						"image" : "res://Assets/Jokes/j1/Frames/first_frame/mickey_with_dialog_with_scenary.png"
+	"chapters": {
+	  "0": {
+		"name": "Piadas ruins",
+		"jokes": {
+		  "0": {
+			"name": "1. Aquele rato que entrou em domínio público",
+			"n_blocks": 3,
+			"n_pieces": 7,
+			"n_types": 3,
+			"audio_end": "res://Assets/Jokes/j1/audio.wav",
+			"blocks": {
+			  "0": {
+				"base": "res://Assets/Jokes/j1/Frames/first_frame/base.png",
+				"combinations": {
+				  "0": {
+					"image": "res://Assets/Jokes/j1/Frames/first_frame/scenary_no_mickey.png",
+					"child": {
+					  "1": {
+						"image": "res://Assets/Jokes/j1/Frames/first_frame/mickey_with_scenary.png",
+						"child": {
+						  "2": {
+							"image": "res://Assets/Jokes/j1/Frames/first_frame/mickey_with_dialog_with_scenary.png"
+						  }
 						}
+					  },
+					  "2": {
+						"image": "res://Assets/Jokes/j1/Frames/first_frame/no_mickey_with_dialog_with_scenary.png"
 					  }
-					},
-					"2" : {
-					  "image" : ""
 					}
-				  }
-				},
-				"1": {
-				  "image": "res://Assets/Jokes/j1/Frames/first_frame/mickey_no_scenary.png",
-				  "child" : {
-					"2" : {
-					  "image" : "res://Assets/Jokes/j1/Frames/first_frame/mickey_with_dialog_no_scenary.png"
+				  },
+				  "1": {
+					"image": "res://Assets/Jokes/j1/Frames/first_frame/mickey_no_scenary.png",
+					"child": {
+					  "2": {
+						"image": "res://Assets/Jokes/j1/Frames/first_frame/mickey_with_dialog_no_scenary.png"
+					  }
 					}
+				  },
+				  "2": {
+					"image": "res://Assets/Jokes/j1/Frames/first_frame/no_mickey_with_dialog_no_scenary.png"
 				  }
-				},
-				"2" : {
-				  "image" : ""
+				}
+			  },
+			  "1": {
+				"base": "res://Assets/Jokes/j1/Frames/second_frame/base.png",
+				"combinations": {
+				  "0": {
+					"image": "res://Assets/Jokes/j1/Frames/second_frame/scenary_no_mickey.png",
+					"child": {
+					  "1": {
+						"image": "res://Assets/Jokes/j1/Frames/second_frame/mickey_with_scenary.png",
+						"child": {
+						  "2": {
+							"image": "res://Assets/Jokes/j1/Frames/second_frame/mickey_with_dialog_with_scenary.png"
+						  }
+						}
+					  },
+					  "2": {
+						"image": "res://Assets/Jokes/j1/Frames/second_frame/no_mickey_with_dialog_with_scenary.png"
+					  }
+					}
+				  },
+				  "1": {
+					"image": "res://Assets/Jokes/j1/Frames/second_frame/mickey_no_scenary.png",
+					"child": {
+					  "2": {
+						"image": "res://Assets/Jokes/j1/Frames/second_frame/mickey_with_dialog_no_scenary.png"
+					  }
+					}
+				  },
+				  "2": {
+					"image": "res://Assets/Jokes/j1/Frames/second_frame/no_mickey_with_dialog_no_scenary.png"
+				  }
+				}
+			  },
+			  "2": {
+				"base": "res://Assets/Jokes/j1/Frames/third_frame/base.png",
+				"combinations": {
+				  "0": {
+					"image": "res://Assets/Jokes/j1/Frames/third_frame/scenary_no_mickey.png",
+					"child": {
+					  "1": {
+						"image": "res://Assets/Jokes/j1/Frames/third_frame/mickey_with_scenary.png",
+						"child": {
+						  "2": {
+							"image": "res://Assets/Jokes/j1/Frames/third_frame/mickey_with_dialog_with_scenary.png"
+						  }
+						}
+					  },
+					  "2": {
+						"image": "res://Assets/Jokes/j1/Frames/third_frame/no_mickey_with_dialog_with_scenary.png"
+					  }
+					}
+				  },
+				  "1": {
+					"image": "res://Assets/Jokes/j1/Frames/third_frame/mickey_no_scenary.png",
+					"child": {
+					  "2": {
+						"image": "res://Assets/Jokes/j1/Frames/third_frame/mickey_with_dialog_no_scenary.png"
+					  }
+					}
+				  },
+				  "2": {
+					"image": "res://Assets/Jokes/j1/Frames/third_frame/no_mickey_with_dialog_no_scenary.png"
+				  }
 				}
 			  }
 			},
-			"1": {
-			  "base": "res://Assets/Jokes/j1/Frames/second_frame/base.png",
-			  "combinations": {
-				"0": {
-				  "image": "res://Assets/Jokes/j1/Frames/second_frame/scenary_no_mickey.png",
-				  "child": {
-					"1": {
-					  "image": "res://Assets/Jokes/j1/Frames/second_frame/mickey_with_scenary.png",
-					  "child" : {
-						"2" : {
-						"image" : "res://Assets/Jokes/j1/Frames/second_frame/mickey_with_dialog_with_scenary.png"
-						}
-					  }
-					},
-					"2" : {
-					  "image" : ""
-					}
-				  }
-				},
-				"1": {
-				  "image": "res://Assets/Jokes/j1/Frames/second_frame/mickey_no_scenary.png",
-				  "child" : {
-					"2" : {
-					  "image" : "res://Assets/Jokes/j1/Frames/second_frame/mickey_with_dialog_no_scenary.png"
-					}
-				  }
-				},
-				"2" : {
-				  "image" : ""
-				}
+			"pieces": {
+			  "0": {
+				"description": "Cenário",
+				"icon": "res://Assets/Jokes/j1/icon.svg",
+				"type": 0,
+				"multiplier": 3
+			  },
+			  "1": {
+				"description": "Mickey",
+				"icon": "res://Assets/Jokes/j1/icon.svg",
+				"type": 1,
+				"multiplier": 3
+			  },
+			  "2": {
+				"description": "Diálogo",
+				"icon": "res://Assets/Jokes/j1/icon.svg",
+				"type": 2,
+				"multiplier": 2
 			  }
 			},
-			"2": {
-			  "base": "res://Assets/Jokes/j1/Frames/third_frame/base.png",
-			  "combinations": {
-				"0": {
-				  "image": "res://Assets/Jokes/j1/Frames/third_frame/scenary_no_mickey.png",
-				  "child": {
-					"1": {
-					  "image": "res://Assets/Jokes/j1/Frames/third_frame/mickey_with_scenary.png",
-					  "child" : {
-						"2" : {
-						"image" : "res://Assets/Jokes/j1/Frames/third_frame/mickey_with_dialog_with_scenary.png"
-						}
-					  }
-					},
-					"2" : {
-					  "image" : ""
-					}
-				  }
-				},
-				"1": {
-				  "image": "res://Assets/Jokes/j1/Frames/third_frame/mickey_no_scenary.png",
-				  "child" : {
-					"2" : {
-					  "image" : "res://Assets/Jokes/j1/Frames/third_frame/mickey_with_dialog_no_scenary.png"
-					}
-				  }
-				},
-				"2" : {
-				  "image" : ""
-				}
+			"combination": {
+			  "0": {
+				"background": 0,
+				"character": 1,
+				"dialog": null,
+				"text": "Tá vendo aquela lua que brilha lá no céu?"
+			  },
+			  "1": {
+				"background": 0,
+				"character": 1,
+				"dialog": 2,
+				"text": "Se você me pedir..."
+			  },
+			  "2": {
+				"background": 0,
+				"character": 1,
+				"dialog": 2,
+				"text": "Eu comi"
 			  }
-			}
-		  },
-		  "pieces": {
-			"0": {
-			  "description": "Cenário",
-			  "icon": "res://Assets/Jokes/j1/icon.svg",
-			  "type": 0,
-			  "multiplier": 3
-			},
-			"1": {
-			  "description": "Mickey",
-			  "icon": "res://Assets/Jokes/j1/icon.svg",
-			  "type": 1,
-			  "multiplier": 3
-			},
-			"2": {
-			  "description": "Diálogo",
-			  "icon": "res://Assets/Jokes/j1/icon.svg",
-			  "type": 2,
-			  "multiplier": 2
-			}
-		  },
-		  "combination": {
-			"0": {
-			  "background": 0,
-			  "character": 1,
-			  "dialog": null,
-			  "text": "Tá vendo aquela lua que brilha lá no céu?"
-			},
-			"1": {
-			  "background": 0,
-			  "character": 1,
-			  "dialog": 2,
-			  "text": "Se você me pedir..."
-			},
-			"2": {
-			  "background": 0,
-			  "character": 1,
-			  "dialog": 2,
-			  "text": "Eu comi"
 			}
 		  }
 		}
 	  }
+	},
+	"text": {
+	  "options": "Opções",
+	  "language": "Linguagem",
+	  "back": "Voltar",
+	  "play": "Jogar",
+	  "quit": "Sair",
+	  "select_chapter": "Selecionar capítulo"
 	}
-  },
-  "text": {
-	"options": "Opções",
-	"language": "Linguagem",
-	"back": "Voltar",
-	"play": "Jogar",
-	"quit": "Sair",
-	"select_chapter": "Selecionar capítulo"
   }
-}
