@@ -35,7 +35,7 @@ func _ready():
 			$Initial/Background.scale = Vector2(1,1)
 		"Dialog":
 			$Initial/Background.texture = preload("res://Assets/Pieces/dialog_piece.png") 
-			$Initial/Background.scale = Vector2(1.75,1.75)
+			$Initial/Background.scale = Vector2(1.5,1.5)
 	
 	
 func _physics_process(_delta: float):
