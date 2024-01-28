@@ -14,7 +14,6 @@ var cursor_images : Array = ["res://Assets/UI/cursor.png",
 
 var original_position: Vector2 
 var Box_realtive: Box
-var tween_finish = false
 var box_turn: bool = true
 
 func _ready():
@@ -29,14 +28,12 @@ func _ready():
 		"Dialog":
 			$Initial/Background.texture = preload("res://Assets/Pieces/dialog_piece.png") 
 		
-	$BoxImage.scale = Vector2(2.75, 2.75)
 	
-	update_textures($Initial/Sprite2D, "p", number_peace)
+	update_textures($Initial/Sprite2D, "p")
 	
 func _physics_process(_delta: float):
 	if hold:
 		global_position = get_global_mouse_position()
-		$BoxImage.visible = false
 		$Initial.visible = true
 	else:
 		if in_box and not hold:
@@ -45,7 +42,6 @@ func _physics_process(_delta: float):
 			if not in_box and not hold:
 				box_turn = false
 		if not in_box:
-			$BoxImage.visible = false
 			$Initial.visible = true
 			var my_tween = get_tree().create_tween()
 			my_tween.finished.connect(finished_home_tween)
@@ -56,13 +52,11 @@ func _physics_process(_delta: float):
 			#global_position = Box_realtive.global_position
 			var my_tween = get_tree().create_tween()
 			my_tween.tween_property(self, "position", Box_realtive.global_position, 0.25).set_trans(Tween.TRANS_LINEAR)
-			$BoxImage.visible = true
 			$Initial.visible = false
 			
 
 func grab(box: Box):
 	Box_realtive = box
-	update_textures($BoxImage, "b", Box_realtive.number_box)
 	global_position = box.global_position
 	in_box = true
 
@@ -74,13 +68,10 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 		hold = !hold
 		Input.set_custom_mouse_cursor(load(cursor_images[int(hold)]))
 
-func update_textures(sprite: Sprite2D, type: String, number_index: int):
+func update_textures(sprite: Sprite2D, type: String):
 	var image = Image.new()
 	if type == "p":
-		image.load(Joke.jokes[str(Joke.act_joke)][type+str(number_peace)][type])
-	if type == "b":
-		image.load(Joke.jokes[str(Joke.act_joke)]["p"+str(number_peace)][type+str(number_index)])
-		print(Joke.jokes[str(Joke.act_joke)]["p"+str(number_peace)][type+str(number_index)])
+		image.load(Joke.jokes[str(Joke.act_joke)][type+str(number_peace)])
 	var t = ImageTexture.new()
 	t = ImageTexture.create_from_image(image)
 	sprite.texture = t

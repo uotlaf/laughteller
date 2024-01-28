@@ -1,9 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://b6yqq01d7375d"]
+[gd_scene load_steps=9 format=3 uid="uid://b6yqq01d7375d"]
 
 [ext_resource type="Script" path="res://Scripts/box.gd" id="1_mmlky"]
 [ext_resource type="Texture2D" uid="uid://ds1st7nd4yy83" path="res://Assets/Frames/background_frame.png" id="2_3akbb"]
 [ext_resource type="Texture2D" uid="uid://dl4ypvsoq6ylf" path="res://Assets/Frames/border_frame.png" id="3_05jw5"]
 [ext_resource type="Texture2D" uid="uid://b6ynpm7xr50uv" path="res://Assets/Frames/edges_frame.png" id="4_mqwyu"]
+
+[sub_resource type="Gradient" id="Gradient_kngve"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rx6cc"]
+gradient = SubResource("Gradient_kngve")
+fill_from = Vector2(0.784404, 0.605505)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxeou"]
 size = Vector2(6.5, 6.5)
@@ -26,6 +32,12 @@ texture = ExtResource("2_3akbb")
 [node name="MEIO" type="Sprite2D" parent="Sprite"]
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("3_05jw5")
+
+[node name="BACK_GROUND" type="Sprite2D" parent="Sprite"]
+visible = false
+position = Vector2(0, 2.5)
+scale = Vector2(4.5, 2.89063)
+texture = SubResource("GradientTexture2D_rx6cc")
 
 [node name="FRENTE" type="Sprite2D" parent="Sprite"]
 scale = Vector2(2.5, 2.5)

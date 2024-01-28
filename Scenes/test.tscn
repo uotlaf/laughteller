@@ -35,11 +35,13 @@ number_box = 2
 material = SubResource("ShaderMaterial_7cv6s")
 position = Vector2(654, 674)
 t_type = "Scenario"
+number_peace = 3
 
 [node name="Peace4" parent="." instance=ExtResource("2_hwc33")]
 material = SubResource("ShaderMaterial_7cv6s")
 position = Vector2(460, 692)
 t_type = "Character"
+number_peace = 2
 
 [node name="Peace3" parent="." instance=ExtResource("2_hwc33")]
 position = Vector2(241, 697)
@@ -49,11 +51,13 @@ t_type = "Character"
 material = SubResource("ShaderMaterial_7cv6s")
 position = Vector2(846, 684)
 t_type = "Scenario"
+number_peace = 4
 
 [node name="Peace7" parent="." instance=ExtResource("2_hwc33")]
 material = SubResource("ShaderMaterial_7cv6s")
 position = Vector2(1041, 690)
 t_type = "Dialog"
+number_peace = 2
 
 [node name="Peace8" parent="." instance=ExtResource("2_hwc33")]
 material = SubResource("ShaderMaterial_7cv6s")

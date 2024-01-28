@@ -5,6 +5,36 @@ class_name Box
 @export var number_box : int = 1
 var object_list: Array[CharacterBody2D] = [] # Bloco que está sendo segurado
 var type_list: Array[String] = []
+var array_combination: Array[String] = ["","",""]
+var combination: String = "" 
+
+
+func _physics_process(_delta: float):
+	find_combination()
+	if combination != "":
+		var image = Image.new()
+		image.load(Joke.jokes[str(Joke.act_joke)][combination])
+		var t = ImageTexture.new()
+		t = ImageTexture.create_from_image(image)
+		$Sprite/BACK_GROUND.texture = t
+		$Sprite/BACK_GROUND.visible = true
+	else:
+		$Sprite/BACK_GROUND.visible = false
+		
+
+func find_combination():
+	var c_type: String = ""
+	for i in object_list:
+		match i.t_type:
+			"Scenario":
+				c_type = "sc"
+			"Character":
+				c_type = "c"
+			"Dialog":
+				c_type = "d"
+				
+		array_combination.append(c_type+str(i.number_peace))
+	combination = array_combination[0]+array_combination[1]+array_combination[2]
 
 func _on_area_2d_body_entered(body):
 	
