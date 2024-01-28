@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8x8tgfn21fgc"
-path="res://.godot/imported/certo.png-1e1821b2ff6de25669d05aece3325040.ctex"
+uid="uid://b0ceuwltigcri"
+path="res://.godot/imported/certo.png-6a79591faf92915a8f4416ef7295801f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menus/certo.png"
-dest_files=["res://.godot/imported/certo.png-1e1821b2ff6de25669d05aece3325040.ctex"]
+source_file="res://Assets/UI/certo.png"
+dest_files=["res://.godot/imported/certo.png-6a79591faf92915a8f4416ef7295801f.ctex"]
 
 [params]
 
