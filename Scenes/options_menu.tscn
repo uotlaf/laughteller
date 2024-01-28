@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dl41abnvuxh72" path="res://Assets/Pages/background_page.png" id="2_sby5j"]
 [ext_resource type="Script" path="res://Scripts/Languages.gd" id="2_v27rf"]
 [ext_resource type="Texture2D" uid="uid://q5ve7jqww2xo" path="res://Assets/UI/PT_press.png" id="3_l3u87"]
-[ext_resource type="ButtonGroup" uid="uid://bthoyfu31k6dv" path="res://Assets/UI/languages_button_group.tres" id="3_qee58"]
+[ext_resource type="ButtonGroup" path="res://Assets/UI/languages_button_group.tres" id="3_qee58"]
 [ext_resource type="Texture2D" uid="uid://r4wu1tyiuenc" path="res://Assets/UI/PT_hover.png" id="4_8ouye"]
 [ext_resource type="Texture2D" uid="uid://chucr22kalph1" path="res://Assets/UI/EN_idle.png" id="6_1dsro"]
 [ext_resource type="Texture2D" uid="uid://d3ffvxy8cj6c3" path="res://Assets/UI/EN_press.png" id="7_rpqf4"]

@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://cy1i1wlwricyn"]
+
+[ext_resource type="Script" path="res://Scenes/credits.gd" id="1_1g2sw"]
+[ext_resource type="Texture2D" uid="uid://dl41abnvuxh72" path="res://Assets/Pages/background_page.png" id="1_3ja2t"]
+[ext_resource type="FontFile" uid="uid://bvp8t12cj2eml" path="res://Assets/Fonts/CuteFont-Regular.ttf" id="2_j3uno"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c5lep"]
+bg_color = Color(0.733333, 0.235294, 0.388235, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m3sdb"]
+bg_color = Color(0.545098, 0.231373, 0.329412, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqwqm"]
+bg_color = Color(0.392157, 0.152941, 0.223529, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_1g2sw")
+
+[node name="BackgroundPage" type="Sprite2D" parent="."]
+position = Vector2(598, 352)
+scale = Vector2(1.01, 1.01)
+texture = ExtResource("1_3ja2t")
+
+[node name="Back" type="Button" parent="."]
+custom_minimum_size = Vector2(80, 30)
+offset_left = 534.0
+offset_top = 536.0
+offset_right = 665.0
+offset_bottom = 628.0
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_j3uno")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_c5lep")
+theme_override_styles/hover = SubResource("StyleBoxFlat_m3sdb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gqwqm")
+text = "Back"
+
+[node name="ThankYou" type="Label" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 201.0
+offset_right = 1052.0
+offset_bottom = 325.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+text = "OBRIGADO POR JOGAR!"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

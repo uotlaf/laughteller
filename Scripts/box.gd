@@ -11,6 +11,7 @@ var combination: String = ""
 @onready var joke : Dictionary = Management.data.chapters[Management.selected_chapter].jokes[Management.selected_joke] 
 
 @onready var _music: Array = [preload("res://Assets/Music/HaHa.mp3"), preload("res://Assets/Music/HaHaSouEuMickey.mp3"), preload("res://Assets/Music/HAHA_piada.mp3")]
+@onready var frases : Array = [get_node("frase1"), get_node("frase2"), get_node("frase3")]
 
 func _physics_process(_delta: float):
 	find_combination()
@@ -28,6 +29,7 @@ func _physics_process(_delta: float):
 func find_combination():
 	var object_ordered : Dictionary = {"0" : null, "1" : null, "2" : null}
 	var current_path : Dictionary = joke.blocks[str(number_box)]
+	var final_combination : Dictionary = joke.combination[str(number_box)]
 	
 	for i in object_list:
 		match i.t_type:
@@ -50,6 +52,15 @@ func find_combination():
 	t = ImageTexture.create_from_image(image)
 	$Sprite/BACK_GROUND.texture = t
 	$Sprite/BACK_GROUND.visible = true
+	
+	if (object_ordered["0"] and object_ordered["1"] and object_ordered["2"] and number_box != 0):
+		frases[number_box].visible = true	
+	elif (number_box == 0 and object_ordered["0"] and object_ordered["1"] and not object_ordered["2"]):
+		frases[number_box].visible = true
+	else:
+		if (frases[number_box]):
+			frases[number_box].visible = false
+	
 	"""
 	var c_type: String = ""
 	for i in object_list:
