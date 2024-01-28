@@ -1,0 +1,87 @@
+{
+  "chapters": {
+	"0": {
+	  "name": "Piadas ruins",
+	  "jokes": {
+		"0": {
+		  "name": "O rato roeu a roupa do rei de roma",
+		  "n_blocks": 3,
+		  "n_pieces": 6,
+		  "audio_end": "res://Assets/Jokes/j1/audio.wav",
+		  "pieces": {
+			"0": {
+			  "description": "Chão visto de lado",
+			  "icon": "res://Assets/Jokes/j1/chao_icon.png",
+			  "image": "res://Assets/Jokes/j1/chao.png",
+			  "type": 0
+			},
+			"1": {
+			  "description": "Guarda roupa",
+			  "icon": "res://Assets/Jokes/j1/guarda_roupa_icon.png",
+			  "image": "res://Assets/Jokes/j1/guarda_roupa.png",
+			  "type": 0
+			},
+			"2": {
+			  "description": "Trono de rei",
+			  "icon": "res://Assets/Jokes/j1/trono_icon.png",
+			  "image": "res://Assets/Jokes/j1/trono.png",
+			  "type": 0
+			},
+			"3": {
+			  "description": "Rato roendo roupa",
+			  "icon": "res://Assets/Jokes/j1/rato_roupa_icon.png",
+			  "image": "res://Assets/Jokes/j1/rato_roupa.png",
+			  "type": 1
+			},
+			"4": {
+			  "description": "Roupa no cabide",
+			  "icon": "res://Assets/Jokes/j1/roupa_cabide_icon.png",
+			  "image": "res://Assets/Jokes/j1/roupa_cabide.png",
+			  "type": 1
+			},
+			"5": {
+			  "description": "Rei sentado",
+			  "icon": "res://Assets/Jokes/j1/rei_sentado_icon.png",
+			  "image": "res://Assets/Jokes/j1/rei_sentado.png",
+			  "type": 1
+			},
+			"6": {
+			  "description": "Diálogo do rei puto",
+			  "icon": "res://Assets/Jokes/j1/rei_dialogo_icon.png",
+			  "imagae": "res://Assets/Jokes/j1/rei_dialogo.png",
+			  "type": 2
+			}
+		  },
+		  "combination": {
+			"0": {
+			  "background": 0,
+			  "character": 3,
+			  "dialog": null,
+			  "text": "O rato roeu"
+			},
+			"1": {
+			  "background": 1,
+			  "character": 4,
+			  "dialog": null,
+			  "text": "a roupa"
+			},
+			"2": {
+			  "background": 2,
+			  "character": 5,
+			  "dialog": 6,
+			  "text": "do rei de roma"
+			}
+		  }
+		}
+	  }
+	}
+  },
+  "text": {
+	"options": "Opções",
+	"language": "Linguagem",
+	"back": "Voltar",
+	"play": "Jogar",
+	"quit": "Sair",
+	"select_chapter": "Selecionar capítulo"
+  }
+}
