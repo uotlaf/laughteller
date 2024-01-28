@@ -1,11 +1,12 @@
 {
   "1": {
 	"nome": "Primeira Piada",
-	"p1": "res://Assets/Jokes/j1/pieces/mickey_piece.png",
+	"c1": "res://Assets/Jokes/j1/pieces/mickey_piece.png",
+	"c2": "res://Assets/Jokes/j1/pieces/mickey_piece.png",
 	"sc2": "res://Assets/Jokes/j1/cursor.png",
+	"sc1": "res://Assets/Jokes/j1/cursor.png",
 	"d1": "res://Assets/Jokes/j1/cursor.png",
 	"d2": "res://Assets/Jokes/j1/cursor.png",
-	"p"
 },
   "2": {
 	"nome": "Segunda Piada",

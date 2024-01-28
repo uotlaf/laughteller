@@ -23,13 +23,15 @@ func _ready():
 	match t_type:
 		"Scenario":
 			$Initial/Background.texture = preload("res://Assets/Pieces/scenary_piece.png")
-		#"Character":
-			#$Initial/Background.texture = preload("res://Assets/Jokes/j1/pieces/mickey_piece.png")
+			update_textures($Initial/Sprite2D, "sc")
+		"Character":
+			$Initial/Background.texture = preload("res://Assets/Jokes/j1/pieces/mickey_piece.png")
+			update_textures($Initial/Sprite2D, "c")
 		"Dialog":
 			$Initial/Background.texture = preload("res://Assets/Pieces/dialog_piece.png") 
+			update_textures($Initial/Sprite2D, "d")
 		
 	
-	update_textures($Initial/Sprite2D, "p")
 	
 func _physics_process(_delta: float):
 	if hold:
@@ -70,8 +72,7 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 
 func update_textures(sprite: Sprite2D, type: String):
 	var image = Image.new()
-	if type == "p":
-		image.load(Joke.jokes[str(Joke.act_joke)][type+str(number_peace)])
+	image.load(Joke.jokes[str(Joke.act_joke)][type+str(number_peace)])
 	var t = ImageTexture.new()
 	t = ImageTexture.create_from_image(image)
 	sprite.texture = t
