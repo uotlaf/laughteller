@@ -110,19 +110,19 @@
 			"pieces": {
 			  "0": {
 				"description": "Cenário",
-				"icon": "res://Assets/Jokes/j1/icon.svg",
+				"icon": "res://Assets/Jokes/j1/pieces/eaten_moon_piece_dialog.png",
 				"type": 0,
 				"multiplier": 3
 			  },
 			  "1": {
 				"description": "Mickey",
-				"icon": "res://Assets/Jokes/j1/icon.svg",
+				"icon": "res://Assets/Jokes/j1/pieces/mickey_piece.png",
 				"type": 1,
 				"multiplier": 3
 			  },
 			  "2": {
 				"description": "Diálogo",
-				"icon": "res://Assets/Jokes/j1/icon.svg",
+				"icon": "res://Assets/Jokes/j1/pieces/moon_piece_scenary.png",
 				"type": 2,
 				"multiplier": 2
 			  }
