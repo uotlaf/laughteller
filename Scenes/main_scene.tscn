@@ -1,8 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://rcrx584wndhs"]
+[gd_scene load_steps=9 format=3 uid="uid://rcrx584wndhs"]
 
 [ext_resource type="Texture2D" uid="uid://behpk7m87ls87" path="res://Assets/Pages/background_page.png" id="1_d0u3t"]
 [ext_resource type="Script" path="res://Scripts/main_scene.gd" id="1_oagq7"]
 [ext_resource type="PackedScene" uid="uid://b6yqq01d7375d" path="res://Scenes/box.tscn" id="2_mujhs"]
+[ext_resource type="Shader" path="res://Shaders/balance.gdshader" id="3_5lfsx"]
+[ext_resource type="Texture2D" uid="uid://dlwextecm1cks" path="res://Assets/Pages/greek_comedy.png" id="3_l1pah"]
+[ext_resource type="Texture2D" uid="uid://7756014yp84g" path="res://Assets/Pages/kind_laugh_2.png" id="5_4oomw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kygoa"]
+shader = ExtResource("3_5lfsx")
+shader_parameter/direction_move = null
+shader_parameter/time_multiplicator_v = 2.0
+shader_parameter/scale_multiplicator_v = 4.0
+shader_parameter/time_multiplicator_h = 2.0
+shader_parameter/scale_multiplicator_h = 2.0
+shader_parameter/height = 3.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3k2v4"]
+shader = ExtResource("3_5lfsx")
+shader_parameter/direction_move = null
+shader_parameter/time_multiplicator_v = 2.0
+shader_parameter/scale_multiplicator_v = 4.0
+shader_parameter/time_multiplicator_h = 2.0
+shader_parameter/scale_multiplicator_h = 2.0
+shader_parameter/height = 3.0
 
 [node name="MAIN_JOKE" type="Node2D"]
 script = ExtResource("1_oagq7")
@@ -12,6 +33,18 @@ offset_right = 1200.0
 offset_bottom = 719.0
 texture = ExtResource("1_d0u3t")
 expand_mode = 1
+
+[node name="HAHA" type="Sprite2D" parent="TextureRect"]
+material = SubResource("ShaderMaterial_kygoa")
+position = Vector2(491, 111)
+scale = Vector2(1.36719, 1.5191)
+texture = ExtResource("3_l1pah")
+
+[node name="HAHA Controlado" type="Sprite2D" parent="TextureRect"]
+material = SubResource("ShaderMaterial_3k2v4")
+position = Vector2(733, 97)
+scale = Vector2(0.30175, 0.335277)
+texture = ExtResource("5_4oomw")
 
 [node name="Box_1" type="Marker2D" parent="TextureRect"]
 position = Vector2(250, 330)

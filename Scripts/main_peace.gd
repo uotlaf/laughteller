@@ -81,6 +81,13 @@ func update_texture(path: String):
 	var t = ImageTexture.new()
 	t = ImageTexture.create_from_image(image)
 	$Initial/Sprite2D.texture = t
+	match t_type:
+		"Dialog":
+			$Initial/Sprite2D.scale = Vector2(2,2)
+		"Scenario":
+			$Initial/Sprite2D.scale = Vector2(2,2)
+			
+	
 
 func finished_home_tween():
 	box_turn = true
