@@ -5,6 +5,27 @@
 [ext_resource type="Texture2D" uid="uid://dueadjkhycn7p" path="res://Assets/UI/storyteller_logo.png" id="2_x81pp"]
 [ext_resource type="FontFile" uid="uid://bvp8t12cj2eml" path="res://Assets/Fonts/CuteFont-Regular.ttf" id="3_ksvb8"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dvl1"]
+bg_color = Color(0.733333, 0.235294, 0.388235, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gvm7f"]
+bg_color = Color(0.545098, 0.231373, 0.329412, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y3lrd"]
+bg_color = Color(0.392157, 0.152941, 0.223529, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 8
@@ -24,27 +45,43 @@ texture = ExtResource("2_wr58g")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = -33.0
-offset_top = 0.5
-offset_right = 33.0
-offset_bottom = 101.5
+offset_left = -49.0
+offset_top = -2.0
+offset_right = 28.0
+offset_bottom = 148.0
+scale = Vector2(1.2, 1.187)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="NewGame" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("3_ksvb8")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_4dvl1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvm7f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y3lrd")
 text = "Jogar"
 
 [node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("3_ksvb8")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_4dvl1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvm7f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y3lrd")
 text = "Opções"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("3_ksvb8")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_4dvl1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gvm7f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y3lrd")
 text = "Sair"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -56,6 +93,6 @@ position = Vector2(2.5, -95.5)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_x81pp")
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
