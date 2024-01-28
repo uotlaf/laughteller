@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://djfehk7q1xuo7"]
 
-[ext_resource type="Texture2D" uid="uid://dl41abnvuxh72" path="res://Assets/Pages/background_page.png" id="1_b4pd8"]
+[ext_resource type="Texture2D" uid="uid://bsoyd2ex7hhnd" path="res://Assets/Menus/background_selecionar_piada.png" id="1_w3r74"]
 [ext_resource type="FontFile" uid="uid://bvp8t12cj2eml" path="res://Assets/Fonts/CuteFont-Regular.ttf" id="2_6uxqc"]
-[ext_resource type="Texture2D" uid="uid://b33axsix3dsej" path="res://Assets/Pages/greek_comedy.png" id="2_dd2e6"]
+[ext_resource type="Texture2D" uid="uid://gn6cjicvfqv3" path="res://Assets/Menus/mickey_selecionar_piada.png" id="2_owoha"]
 [ext_resource type="Script" path="res://Scripts/chapter_list.gd" id="4_roave"]
 [ext_resource type="Script" path="res://Scripts/peace_select_button.gd" id="5_unpmg"]
 
@@ -14,31 +14,31 @@ default_font_size = 50
 
 [node name="BackgroundPage" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(603, 353)
-texture = ExtResource("1_b4pd8")
+position = Vector2(633, 354)
+scale = Vector2(0.892593, 0.892593)
+texture = ExtResource("1_w3r74")
 
 [node name="GreekComedy" type="Sprite2D" parent="."]
-position = Vector2(274, 357)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("2_dd2e6")
+position = Vector2(230, 370)
+scale = Vector2(0.641667, 0.641667)
+texture = ExtResource("2_owoha")
 
 [node name="chapter_name" type="RichTextLabel" parent="."]
-offset_left = 482.0
-offset_top = 36.0
-offset_right = 913.0
-offset_bottom = 112.0
+offset_left = 457.0
+offset_top = 75.0
+offset_right = 1103.0
+offset_bottom = 151.0
 theme = SubResource("Theme_p0xh4")
-theme_override_colors/default_color = Color(0, 0, 0, 1)
 bbcode_enabled = true
 text = "[center]Capitulos[center]"
 scroll_active = false
 autowrap_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-offset_left = 482.0
-offset_top = 91.0
-offset_right = 913.0
-offset_bottom = 720.0
+offset_left = 582.0
+offset_top = 163.0
+offset_right = 1013.0
+offset_bottom = 722.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2

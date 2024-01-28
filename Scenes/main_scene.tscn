@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://Scripts/main_scene.gd" id="1_oagq7"]
 [ext_resource type="PackedScene" uid="uid://b6yqq01d7375d" path="res://Scenes/box.tscn" id="2_mujhs"]
 [ext_resource type="Shader" path="res://Shaders/balance.gdshader" id="3_5lfsx"]
-[ext_resource type="Texture2D" uid="uid://dlwextecm1cks" path="res://Assets/Pages/greek_comedy.png" id="3_l1pah"]
-[ext_resource type="Texture2D" uid="uid://7756014yp84g" path="res://Assets/Pages/kind_laugh_2.png" id="5_4oomw"]
+[ext_resource type="Texture2D" uid="uid://b33axsix3dsej" path="res://Assets/Pages/greek_comedy.png" id="3_l1pah"]
+[ext_resource type="Texture2D" uid="uid://dtttg0elv6ig4" path="res://Assets/Pages/kind_laugh_2.png" id="5_4oomw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kygoa"]
 shader = ExtResource("3_5lfsx")

@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxo2qqa0ey3rv"]
+[gd_scene load_steps=7 format=3 uid="uid://cxo2qqa0ey3rv"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_cs1ej"]
-[ext_resource type="Texture2D" uid="uid://bjcnydq0k2hdf" path="res://Assets/UI/shrek_book.png" id="2_wr58g"]
-[ext_resource type="Texture2D" uid="uid://dueadjkhycn7p" path="res://Assets/UI/storyteller_logo.png" id="2_x81pp"]
+[ext_resource type="Texture2D" uid="uid://v03abnjej2i2" path="res://Assets/Menus/SOACAPA.png" id="2_pg717"]
 [ext_resource type="FontFile" uid="uid://bvp8t12cj2eml" path="res://Assets/Fonts/CuteFont-Regular.ttf" id="3_ksvb8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dvl1"]
@@ -39,9 +38,9 @@ scale = Vector2(2, 2)
 script = ExtResource("1_cs1ej")
 
 [node name="ShrekBook" type="Sprite2D" parent="."]
-position = Vector2(-29.5, 2.5)
-scale = Vector2(0.53, 0.53)
-texture = ExtResource("2_wr58g")
+position = Vector2(17.5, 0.500003)
+scale = Vector2(0.494805, 0.498819)
+texture = ExtResource("2_pg717")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -87,11 +86,6 @@ text = "Sair"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = 10.0
 autoplay = true
-
-[node name="StorytellerLogo" type="Sprite2D" parent="."]
-position = Vector2(2.5, -95.5)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_x81pp")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
