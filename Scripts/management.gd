@@ -1,17 +1,15 @@
 extends Node
 
-var act_joke = 0
-
+var current_joke : int = -1
 var current_language : bool = 0
 
 var languages : Array = ["pt", "en"]
-
-const jokes_json_path : String = "res://Assets/Jokes/"
+const data_json_path : String = "res://Assets/Jokes/"
 
 var data: Dictionary 
 
 func load_language(language_no):
-	var path : String = jokes_json_path + "info_" + languages[int(current_language)] + ".json"
+	var path : String = data_json_path + "info_" + languages[int(current_language)] + ".json"
 	var file = FileAccess.open(path, FileAccess.READ)
 	assert(file)
 	var json = JSON.new()

@@ -23,6 +23,9 @@ scale = Vector2(2, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="Initial"]
 
+[node name="BoxImage" type="Sprite2D" parent="."]
+scale = Vector2(2.38333, 2.425)
+
 [node name="Collision_" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_p0mt1")
 

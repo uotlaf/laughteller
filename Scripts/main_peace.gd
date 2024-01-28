@@ -17,7 +17,7 @@ var Box_realtive: Box
 var box_turn: bool = true
 
 func _ready():
-	Joke.act_joke = 1
+	Managenment.act_joke = 1
 	original_position = global_position
 	
 	match t_type:
@@ -77,8 +77,5 @@ func update_textures(sprite: Sprite2D, type: String):
 	t = ImageTexture.create_from_image(image)
 	sprite.texture = t
 
-	
 func finished_home_tween():
 	box_turn = true
-
-	
