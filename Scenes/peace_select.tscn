@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://djfehk7q1xuo7"]
 
-[ext_resource type="Texture2D" uid="uid://dl41abnvuxh72" path="res://Assets/Pages/background_page.png" id="1_b4pd8"]
+[ext_resource type="Texture2D" uid="uid://behpk7m87ls87" path="res://Assets/Pages/background_page.png" id="1_b4pd8"]
 [ext_resource type="FontFile" uid="uid://bvp8t12cj2eml" path="res://Assets/Fonts/CuteFont-Regular.ttf" id="2_6uxqc"]
-[ext_resource type="Texture2D" uid="uid://b33axsix3dsej" path="res://Assets/Pages/greek_comedy.png" id="2_dd2e6"]
+[ext_resource type="Texture2D" uid="uid://dlwextecm1cks" path="res://Assets/Pages/greek_comedy.png" id="2_dd2e6"]
 [ext_resource type="Script" path="res://Scenes/chapter_list.gd" id="4_roave"]
 [ext_resource type="Script" path="res://Scripts/peace_select_button.gd" id="5_unpmg"]
 

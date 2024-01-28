@@ -16,22 +16,26 @@ var original_position: Vector2
 var Box_realtive: Box
 var box_turn: bool = true
 
+
 # TODO: Procedurar isso
 func _ready():
-	original_position = global_position
+	$Initial.visible = true
+	print(get_parent())
+	if get_parent() is Node2D and get_parent().name == "Peace_Mark":
+		original_position = get_parent().global_position
+	else:
+		original_position = global_position
 	print(Management.selected_joke)
 	
 	match t_type:
 		"Scenario":
 			$Initial/Background.texture = preload("res://Assets/Pieces/scenary_piece.png")
-			update_textures($Initial/Sprite2D, "sc")
 		"Character":
-			$Initial/Background.texture = preload("res://Assets/Jokes/j1/pieces/mickey_piece.png")
-			update_textures($Initial/Sprite2D, "c")
+			$Initial/Background.texture = preload("res://Assets/Pieces/character_piece.png")
+			$Initial/Background.scale = Vector2(1.5,1.5)
 		"Dialog":
 			$Initial/Background.texture = preload("res://Assets/Pieces/dialog_piece.png") 
-			update_textures($Initial/Sprite2D, "d")
-		
+			$Initial/Background.scale = Vector2(1.75,1.75)
 	
 	
 func _physics_process(_delta: float):
@@ -71,12 +75,12 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 		hold = !hold
 		Input.set_custom_mouse_cursor(load(cursor_images[int(hold)]))
 
-func update_textures(sprite: Sprite2D, type: String):
-	var image = Image.new()
-	#image.load(Joke.jokes[str(Joke.act_joke)][type+str(number_peace)])
-	var t = ImageTexture.new()
-	t = ImageTexture.create_from_image(image)
-	sprite.texture = t
+#func update_textures(sprite: Sprite2D, type: String):
+	#var image = Image.new()
+	##image.load(Management.data.)
+	#var t = ImageTexture.new()
+	#t = ImageTexture.create_from_image(image)
+	#sprite.texture = t
 
 func finished_home_tween():
 	box_turn = true

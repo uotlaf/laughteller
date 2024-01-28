@@ -8,8 +8,8 @@ var languages : Array = ["pt", "en"]
 const data_json_path : String = "res://Assets/Jokes/"
 const config_path : String = "./config.txt"
 
-var selected_joke
-var selected_chapter
+var selected_joke = "0"
+var selected_chapter = "0"
 
 var data: Dictionary 
 

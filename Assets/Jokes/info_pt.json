@@ -6,7 +6,7 @@
 		"0": {
 		  "name": "1. O rato",
 		  "n_blocks": 3,
-		  "n_pieces": 6,
+		  "n_pieces": 12,
 		  "audio_end": "res://Assets/Jokes/j1/audio.wav",
 		  "pieces": {
 			"0": {

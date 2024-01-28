@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://2dxyom3qpgna"]
 
-[ext_resource type="Texture2D" uid="uid://dl41abnvuxh72" path="res://Assets/Pages/background_page.png" id="1_eidlw"]
+[ext_resource type="Texture2D" uid="uid://behpk7m87ls87" path="res://Assets/Pages/background_page.png" id="1_eidlw"]
 [ext_resource type="PackedScene" uid="uid://b6yqq01d7375d" path="res://Scenes/box.tscn" id="1_ocrx1"]
 [ext_resource type="PackedScene" uid="uid://ba21nniksg3gd" path="res://Scenes/main_peace.tscn" id="2_hwc33"]
 [ext_resource type="Shader" path="res://Shaders/balance.gdshader" id="4_atnkn"]
@@ -12,8 +12,10 @@ shader_parameter/time_multiplicator_v = 4.0
 shader_parameter/scale_multiplicator_v = 2.0
 shader_parameter/time_multiplicator_h = 4.0
 shader_parameter/scale_multiplicator_h = 2.0
+shader_parameter/height = 3.0
 
-[node name="Node2D" type="Node2D"]
+[node name="test" type="Node2D"]
+position = Vector2(-2, 0)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
@@ -37,7 +39,6 @@ position = Vector2(654, 674)
 t_type = "Scenario"
 
 [node name="Peace4" parent="." instance=ExtResource("2_hwc33")]
-material = SubResource("ShaderMaterial_7cv6s")
 position = Vector2(460, 692)
 t_type = "Character"
 number_peace = 2

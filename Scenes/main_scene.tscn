@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://rcrx584wndhs"]
+
+[ext_resource type="Texture2D" uid="uid://behpk7m87ls87" path="res://Assets/Pages/background_page.png" id="1_d0u3t"]
+[ext_resource type="Script" path="res://Scripts/main_scene.gd" id="1_oagq7"]
+[ext_resource type="PackedScene" uid="uid://b6yqq01d7375d" path="res://Scenes/box.tscn" id="2_mujhs"]
+
+[node name="MAIN_JOKE" type="Node2D"]
+script = ExtResource("1_oagq7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1200.0
+offset_bottom = 719.0
+texture = ExtResource("1_d0u3t")
+expand_mode = 1
+
+[node name="Box_1" type="Marker2D" parent="TextureRect"]
+position = Vector2(945, 184)
+scale = Vector2(1, 1.11111)
+
+[node name="Box" parent="TextureRect/Box_1" instance=ExtResource("2_mujhs")]
+
+[node name="Box_2" type="Marker2D" parent="TextureRect"]
+position = Vector2(600, 182)
+scale = Vector2(1, 1.11111)
+
+[node name="Box" parent="TextureRect/Box_2" instance=ExtResource("2_mujhs")]
+
+[node name="Box_3" type="Marker2D" parent="TextureRect"]
+position = Vector2(255, 182)
+scale = Vector2(1, 1.11111)
+
+[node name="Box" parent="TextureRect/Box_3" instance=ExtResource("2_mujhs")]
