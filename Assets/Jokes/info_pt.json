@@ -11,8 +11,8 @@
 			"audio_end": "res://Assets/Jokes/j1/audio.wav",
 			"blocks": {
 			  "0": {
-				"base": "res://Assets/Jokes/j1/Frames/first_frame/base.png",
-				"combinations": {
+				"image": "res://Assets/Jokes/j1/Frames/first_frame/base.png",
+				"child": {
 				  "0": {
 					"image": "res://Assets/Jokes/j1/Frames/first_frame/scenary_no_mickey.png",
 					"child": {
@@ -43,8 +43,8 @@
 				}
 			  },
 			  "1": {
-				"base": "res://Assets/Jokes/j1/Frames/second_frame/base.png",
-				"combinations": {
+				"image": "res://Assets/Jokes/j1/Frames/second_frame/base.png",
+				"child": {
 				  "0": {
 					"image": "res://Assets/Jokes/j1/Frames/second_frame/scenary_no_mickey.png",
 					"child": {
@@ -75,8 +75,8 @@
 				}
 			  },
 			  "2": {
-				"base": "res://Assets/Jokes/j1/Frames/third_frame/base.png",
-				"combinations": {
+				"image": "res://Assets/Jokes/j1/Frames/third_frame/base.png",
+				"child": {
 				  "0": {
 					"image": "res://Assets/Jokes/j1/Frames/third_frame/scenary_no_mickey.png",
 					"child": {

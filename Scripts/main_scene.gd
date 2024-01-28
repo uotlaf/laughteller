@@ -20,7 +20,6 @@ func _ready():
 	#SEGUNDO A FUNÇÃO QUE CRIAS AS PEÇAS DE ACORDO COM JSON E NAS POSIÇÕES CORRETAS
 	#TESTE NICE	
 	decide_positions()
-	print(peace_positions)
 	instance_peace()
 
 

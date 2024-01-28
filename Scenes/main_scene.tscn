@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://rcrx584wndhs"]
 
-[ext_resource type="Texture2D" uid="uid://behpk7m87ls87" path="res://Assets/Pages/background_page.png" id="1_d0u3t"]
+[ext_resource type="Texture2D" uid="uid://dl41abnvuxh72" path="res://Assets/Pages/background_page.png" id="1_d0u3t"]
 [ext_resource type="Script" path="res://Scripts/main_scene.gd" id="1_oagq7"]
 [ext_resource type="PackedScene" uid="uid://b6yqq01d7375d" path="res://Scenes/box.tscn" id="2_mujhs"]
 [ext_resource type="Shader" path="res://Shaders/balance.gdshader" id="3_5lfsx"]
@@ -51,6 +51,7 @@ position = Vector2(250, 330)
 scale = Vector2(1, 1.11111)
 
 [node name="Box" parent="TextureRect/Box_1" instance=ExtResource("2_mujhs")]
+number_box = 0
 
 [node name="Box_2" type="Marker2D" parent="TextureRect"]
 position = Vector2(600, 330)
@@ -63,3 +64,4 @@ position = Vector2(950, 330)
 scale = Vector2(1, 1.11111)
 
 [node name="Box" parent="TextureRect/Box_3" instance=ExtResource("2_mujhs")]
+number_box = 2

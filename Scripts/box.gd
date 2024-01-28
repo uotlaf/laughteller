@@ -8,21 +8,48 @@ var type_list: Array[String] = []
 var array_combination: Array[String] = ["","",""]
 var combination: String = "" 
 
+@onready var joke : Dictionary = Management.data.chapters[Management.selected_chapter].jokes[Management.selected_joke] 
+
 
 func _physics_process(_delta: float):
 	find_combination()
-	if combination != "":
+"""	if combination != "":
 		var image = Image.new()
-		#image.load(Joke.jokes[str(Joke.act_joke)][combination])
+		image.load(Joke.jokes[str(Joke.act_joke)][combination])
 		var t = ImageTexture.new()
 		t = ImageTexture.create_from_image(image)
 		$Sprite/BACK_GROUND.texture = t
 		$Sprite/BACK_GROUND.visible = true
 	else:
 		$Sprite/BACK_GROUND.visible = false
-		
+"""		
 
 func find_combination():
+	var object_ordered : Dictionary = {"0" : null, "1" : null, "2" : null}
+	var current_path : Dictionary = joke.blocks[str(number_box)]
+	
+	for i in object_list:
+		match i.t_type:
+			"Scenario":
+				object_ordered["0"] = i
+			"Character":
+				object_ordered["1"] = i
+			"Dialog":
+				object_ordered["2"] = i
+	if (object_ordered["0"]):
+		current_path = current_path.child["0"]
+	if (object_ordered["1"]):
+		current_path = current_path.child["1"]
+	if (object_ordered["2"]):
+		current_path = current_path.child["2"]
+	
+	var image = Image.new()
+	image.load(current_path.image)
+	var t = ImageTexture.new()
+	t = ImageTexture.create_from_image(image)
+	$Sprite/BACK_GROUND.texture = t
+	$Sprite/BACK_GROUND.visible = true
+	"""
 	var c_type: String = ""
 	for i in object_list:
 		match i.t_type:
@@ -35,6 +62,7 @@ func find_combination():
 				
 		array_combination.append(c_type+str(i.number_peace))
 	combination = array_combination[0]+array_combination[1]+array_combination[2]
+"""
 
 func _on_area_2d_body_entered(body):
 	
