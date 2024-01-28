@@ -13,7 +13,7 @@ func _physics_process(_delta: float):
 	find_combination()
 	if combination != "":
 		var image = Image.new()
-		image.load(Joke.jokes[str(Joke.act_joke)][combination])
+		#image.load(Joke.jokes[str(Joke.act_joke)][combination])
 		var t = ImageTexture.new()
 		t = ImageTexture.create_from_image(image)
 		$Sprite/BACK_GROUND.texture = t

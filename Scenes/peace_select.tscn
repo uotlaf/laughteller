@@ -1,3 +1,46 @@
-[gd_scene format=3 uid="uid://djfehk7q1xuo7"]
+[gd_scene load_steps=7 format=3 uid="uid://djfehk7q1xuo7"]
+
+[ext_resource type="Texture2D" uid="uid://dl41abnvuxh72" path="res://Assets/Pages/background_page.png" id="1_b4pd8"]
+[ext_resource type="FontFile" uid="uid://bvp8t12cj2eml" path="res://Assets/Fonts/CuteFont-Regular.ttf" id="2_6uxqc"]
+[ext_resource type="Texture2D" uid="uid://b33axsix3dsej" path="res://Assets/Pages/greek_comedy.png" id="2_dd2e6"]
+[ext_resource type="Script" path="res://Scenes/chapter_list.gd" id="4_roave"]
+[ext_resource type="Script" path="res://Scripts/peace_select_button.gd" id="5_unpmg"]
+
+[sub_resource type="Theme" id="Theme_p0xh4"]
+default_font = ExtResource("2_6uxqc")
+default_font_size = 50
 
 [node name="PeaceSelect" type="Node2D"]
+
+[node name="BackgroundPage" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(603, 353)
+texture = ExtResource("1_b4pd8")
+
+[node name="GreekComedy" type="Sprite2D" parent="."]
+position = Vector2(274, 357)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_dd2e6")
+
+[node name="chapter_name" type="RichTextLabel" parent="."]
+offset_left = 482.0
+offset_top = 36.0
+offset_right = 913.0
+offset_bottom = 112.0
+theme = SubResource("Theme_p0xh4")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "[center]Capitulos[center]"
+scroll_active = false
+autowrap_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 482.0
+offset_top = 91.0
+offset_right = 913.0
+offset_bottom = 720.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+script = ExtResource("4_roave")
+button_script = ExtResource("5_unpmg")

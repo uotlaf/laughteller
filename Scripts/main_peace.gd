@@ -16,9 +16,10 @@ var original_position: Vector2
 var Box_realtive: Box
 var box_turn: bool = true
 
+# TODO: Procedurar isso
 func _ready():
-	Management.act_joke = 1
 	original_position = global_position
+	print(Management.selected_joke)
 	
 	match t_type:
 		"Scenario":
@@ -72,7 +73,7 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 
 func update_textures(sprite: Sprite2D, type: String):
 	var image = Image.new()
-	image.load(Joke.jokes[str(Joke.act_joke)][type+str(number_peace)])
+	#image.load(Joke.jokes[str(Joke.act_joke)][type+str(number_peace)])
 	var t = ImageTexture.new()
 	t = ImageTexture.create_from_image(image)
 	sprite.texture = t
