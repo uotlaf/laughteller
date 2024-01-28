@@ -10,6 +10,7 @@ var combination: String = ""
 
 @onready var joke : Dictionary = Management.data.chapters[Management.selected_chapter].jokes[Management.selected_joke] 
 
+@onready var _music: Array = [preload("res://Assets/Music/HaHa.mp3"), preload("res://Assets/Music/HaHaSouEuMickey.mp3"), preload("res://Assets/Music/HAHA_piada.mp3")]
 
 func _physics_process(_delta: float):
 	find_combination()
@@ -76,6 +77,13 @@ func _on_area_2d_body_entered(body):
 				body.in_box = true
 				object_list.append(body)
 				type_list.append(body.t_type)
+				
+				#PARTE DE AÚDIO
+				if body.t_type == "Character":
+					var selected_music = _music.pick_random()
+					$Haha.stream = selected_music
+					$Haha.play()
+	
 	#print(str(number_box) + type_list)
 func _on_area_2d_body_exited(body):
 	# Corpo está sendo segurado pelo cursor e é o que está sendo segurado pela caixa
