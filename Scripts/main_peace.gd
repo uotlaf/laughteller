@@ -32,7 +32,7 @@ func _ready():
 			$Initial/Background.texture = preload("res://Assets/Pieces/scenary_piece.png")
 		"Character":
 			$Initial/Background.texture = preload("res://Assets/Pieces/character_piece.png")
-			$Initial/Background.scale = Vector2(1.5,1.5)
+			$Initial/Background.scale = Vector2(1,1)
 		"Dialog":
 			$Initial/Background.texture = preload("res://Assets/Pieces/dialog_piece.png") 
 			$Initial/Background.scale = Vector2(1.75,1.75)
@@ -75,12 +75,12 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 		hold = !hold
 		Input.set_custom_mouse_cursor(load(cursor_images[int(hold)]))
 
-#func update_textures(sprite: Sprite2D, type: String):
-	#var image = Image.new()
-	##image.load(Management.data.)
-	#var t = ImageTexture.new()
-	#t = ImageTexture.create_from_image(image)
-	#sprite.texture = t
+func update_texture(path: String):
+	var image = Image.new()
+	image.load(path)
+	var t = ImageTexture.new()
+	t = ImageTexture.create_from_image(image)
+	$Initial/Sprite2D.texture = t
 
 func finished_home_tween():
 	box_turn = true

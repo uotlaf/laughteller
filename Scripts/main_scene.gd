@@ -35,11 +35,20 @@ func decide_positions():
 		peace_positions.append(act_position)
 
 func instance_peace():
-	for i in range(joke.n_pieces):
-		const PEACE: PackedScene = preload("res://Scenes/main_peace.tscn")
-		var peace = PEACE.instantiate()
-		peace.global_position = peace_positions[i]
-		peace.t_type = "Scenario"
-		call_deferred("add_child", peace)
-		
+	var jk: int= 0
+	for i in range(joke.n_types):
+		for j in joke.pieces[str(i)].multiplier:
+			const PEACE: PackedScene = preload("res://Scenes/main_peace.tscn")
+			var peace = PEACE.instantiate()
+			peace.global_position = peace_positions[jk]
+			match str(joke.pieces[str(i)].type):
+				"0":
+					peace.t_type = "Scenario"
+				"1":
+					peace.t_type = "Character"
+				"2":
+					peace.t_type = "Dialog"
+			peace.update_texture(joke.pieces[str(i)].icon)
+			call_deferred("add_child", peace)
+			jk += 1
 
