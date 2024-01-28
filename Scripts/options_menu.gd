@@ -17,10 +17,12 @@ func _on_back_pressed():
 func _on_portugues_toggled(toggled_on):
 	Management.load_language(0)
 	update_option_texts()
+	Management.save_options()
 
 func _on_english_toggled(toggled_on):
 	Management.load_language(1)
 	update_option_texts()
+	Management.save_options()
 
 func update_option_texts():
 	button_back.text = Management.data.text.back
