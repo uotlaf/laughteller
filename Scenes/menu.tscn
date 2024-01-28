@@ -50,7 +50,7 @@ text = "Sair"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_r2112")
-volume_db = -10.0
+volume_db = 10.0
 autoplay = true
 
 [node name="StorytellerLogo" type="Sprite2D" parent="."]
