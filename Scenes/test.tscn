@@ -1,6 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://2dxyom3qpgna"]
+[gd_scene load_steps=7 format=3 uid="uid://2dxyom3qpgna"]
 
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://behpk7m87ls87" path="res://Assets/Pages/background_page.png" id="1_eidlw"]
+=======
+[ext_resource type="Texture2D" uid="uid://dl41abnvuxh72" path="res://Assets/Pages/background_page.png" id="1_eidlw"]
+[ext_resource type="Script" path="res://Scenes/jokes_screen.gd" id="1_lr67d"]
+>>>>>>> 4c3e87f022fc78636fe22b05c5f6192d1577ae3d
 [ext_resource type="PackedScene" uid="uid://b6yqq01d7375d" path="res://Scenes/box.tscn" id="1_ocrx1"]
 [ext_resource type="PackedScene" uid="uid://ba21nniksg3gd" path="res://Scenes/main_peace.tscn" id="2_hwc33"]
 [ext_resource type="Shader" path="res://Shaders/balance.gdshader" id="4_atnkn"]
@@ -14,10 +19,16 @@ shader_parameter/time_multiplicator_h = 4.0
 shader_parameter/scale_multiplicator_h = 2.0
 shader_parameter/height = 3.0
 
+<<<<<<< HEAD
 [node name="test" type="Node2D"]
 position = Vector2(-2, 0)
+=======
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_lr67d")
+>>>>>>> 4c3e87f022fc78636fe22b05c5f6192d1577ae3d
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="background" type="TextureRect" parent="."]
+z_index = -1
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_eidlw")
