@@ -4,52 +4,59 @@
 	  "name": "Piadas ruins",
 	  "jokes": {
 		"0": {
-		  "name": "1. O rato",
+		  "name": "1. Aquele rato que entrou em domínio público",
 		  "n_blocks": 3,
-		  "n_pieces": 6,
+		  "n_pieces": 5,
 		  "audio_end": "res://Assets/Jokes/j1/audio.wav",
 		  "pieces": {
 			"0": {
 			  "description": "Chão visto de lado",
 			  "icon": "res://Assets/Jokes/j1/chao_icon.png",
 			  "image": "res://Assets/Jokes/j1/chao.png",
-			  "type": 0
+			  "type": 0,
+			  "multiplier" : 3
 			},
 			"1": {
 			  "description": "Guarda roupa",
 			  "icon": "res://Assets/Jokes/j1/guarda_roupa_icon.png",
 			  "image": "res://Assets/Jokes/j1/guarda_roupa.png",
-			  "type": 0
+			  "type": 0,
+			  "multiplier" : 3
 			},
 			"2": {
 			  "description": "Trono de rei",
 			  "icon": "res://Assets/Jokes/j1/trono_icon.png",
 			  "image": "res://Assets/Jokes/j1/trono.png",
-			  "type": 0
+			  "type": 0,
+			  "multiplier" : 3
 			},
 			"3": {
 			  "description": "Rato roendo roupa",
 			  "icon": "res://Assets/Jokes/j1/rato_roupa_icon.png",
 			  "image": "res://Assets/Jokes/j1/rato_roupa.png",
-			  "type": 1
+			  "type": 1,
+			  "multiplier" : 3
 			},
 			"4": {
 			  "description": "Roupa no cabide",
 			  "icon": "res://Assets/Jokes/j1/roupa_cabide_icon.png",
 			  "image": "res://Assets/Jokes/j1/roupa_cabide.png",
-			  "type": 1
+			  "type": 1,
+			  "multiplier" : 3
 			},
 			"5": {
 			  "description": "Rei sentado",
 			  "icon": "res://Assets/Jokes/j1/rei_sentado_icon.png",
 			  "image": "res://Assets/Jokes/j1/rei_sentado.png",
-			  "type": 1
+			  "type": 1,
+			  "multiplier" : 3
 			},
 			"6": {
 			  "description": "Diálogo do rei puto",
 			  "icon": "res://Assets/Jokes/j1/rei_dialogo_icon.png",
 			  "imagae": "res://Assets/Jokes/j1/rei_dialogo.png",
-			  "type": 2
+			  "type": 2,
+			  "multiplier" : 3
 			}
 		  },
 		  "combination": {
