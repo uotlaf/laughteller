@@ -82,6 +82,7 @@
 	"back": "Back",
 	"play": "Play",
 	"quit": "Quit",
-	"select_chapter": "Select chapter"
+	"select_chapter": "Select chapter",
+	"thank_you": "THANK YOU FOR PLAYING!"
   }
 }

@@ -157,6 +157,7 @@
 	  "back": "Voltar",
 	  "play": "Jogar",
 	  "quit": "Sair",
-	  "select_chapter": "Selecionar capítulo"
+	  "select_chapter": "Selecionar capítulo",
+	  "thank_you": "OBRIGADO POR JOGAR!"
 	}
   }
