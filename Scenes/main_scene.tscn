@@ -123,4 +123,5 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_70vfa")
 text = "Voltar ao menu principal"
 script = ExtResource("8_piw7g")
 
+[connection signal="mouse_entered" from="menu" to="menu" method="_on_mouse_entered"]
 [connection signal="pressed" from="menu" to="menu" method="_on_pressed"]

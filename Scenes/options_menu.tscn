@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dl41abnvuxh72" path="res://Assets/Pages/background_page.png" id="2_sby5j"]
 [ext_resource type="Script" path="res://Scripts/Languages.gd" id="2_v27rf"]
 [ext_resource type="Texture2D" uid="uid://q5ve7jqww2xo" path="res://Assets/UI/PT_press.png" id="3_l3u87"]
-[ext_resource type="ButtonGroup" path="res://Assets/UI/languages_button_group.tres" id="3_qee58"]
+[ext_resource type="ButtonGroup" uid="uid://bthoyfu31k6dv" path="res://Assets/UI/languages_button_group.tres" id="3_qee58"]
 [ext_resource type="Texture2D" uid="uid://r4wu1tyiuenc" path="res://Assets/UI/PT_hover.png" id="4_8ouye"]
 [ext_resource type="Texture2D" uid="uid://chucr22kalph1" path="res://Assets/UI/EN_idle.png" id="6_1dsro"]
 [ext_resource type="Texture2D" uid="uid://d3ffvxy8cj6c3" path="res://Assets/UI/EN_press.png" id="7_rpqf4"]
@@ -45,6 +45,31 @@ position = Vector2(598, 398)
 scale = Vector2(1.01, 1.01)
 texture = ExtResource("2_sby5j")
 
+[node name="Languages" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 117.0
+offset_top = 105.0
+offset_right = 3961.0
+offset_bottom = 735.0
+scale = Vector2(0.15, 0.15)
+script = ExtResource("2_v27rf")
+
+[node name="Portugues" type="TextureButton" parent="Languages"]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("3_qee58")
+texture_normal = ExtResource("2_3s4it")
+texture_pressed = ExtResource("3_l3u87")
+texture_hover = ExtResource("4_8ouye")
+
+[node name="English" type="TextureButton" parent="Languages"]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("3_qee58")
+texture_normal = ExtResource("6_1dsro")
+texture_pressed = ExtResource("7_rpqf4")
+texture_hover = ExtResource("8_eibwe")
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
 offset_left = 489.0
@@ -67,31 +92,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_3c713")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ovrbr")
 text = "Back"
 
-[node name="Languages" type="HBoxContainer" parent="."]
-layout_mode = 2
-offset_left = 117.0
-offset_top = 105.0
-offset_right = 2041.0
-offset_bottom = 735.0
-scale = Vector2(0.15, 0.15)
-script = ExtResource("2_v27rf")
-
-[node name="Portugues" type="TextureButton" parent="Languages"]
-layout_mode = 2
-toggle_mode = true
-button_group = ExtResource("3_qee58")
-texture_normal = ExtResource("2_3s4it")
-texture_pressed = ExtResource("3_l3u87")
-texture_hover = ExtResource("4_8ouye")
-
-[node name="English" type="TextureButton" parent="Languages"]
-layout_mode = 2
-toggle_mode = true
-button_group = ExtResource("3_qee58")
-texture_normal = ExtResource("6_1dsro")
-texture_pressed = ExtResource("7_rpqf4")
-texture_hover = ExtResource("8_eibwe")
-
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="mouse_entered" from="Languages/Portugues" to="." method="_on_portugues_mouse_entered"]
 [connection signal="toggled" from="Languages/Portugues" to="." method="_on_portugues_toggled"]
+[connection signal="mouse_entered" from="Languages/English" to="." method="_on_english_mouse_entered"]
 [connection signal="toggled" from="Languages/English" to="." method="_on_english_toggled"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_mouse_entered"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

@@ -18,6 +18,7 @@ config/icon="res://Assets/icon.svg"
 [autoload]
 
 Management="*res://Scripts/management.gd"
+SoundFx="*res://Scenes/sound_fx.tscn"
 
 [display]
 

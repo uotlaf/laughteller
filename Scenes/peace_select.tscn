@@ -1,14 +1,35 @@
-[gd_scene load_steps=7 format=3 uid="uid://djfehk7q1xuo7"]
+[gd_scene load_steps=10 format=3 uid="uid://djfehk7q1xuo7"]
 
-[ext_resource type="Texture2D" uid="uid://bsoyd2ex7hhnd" path="res://Assets/Menus/background_selecionar_piada.png" id="1_w3r74"]
+[ext_resource type="Texture2D" uid="uid://bpdsu5ladg1kb" path="res://Assets/Menus/background_selecionar_piada.png" id="1_w3r74"]
 [ext_resource type="FontFile" uid="uid://bvp8t12cj2eml" path="res://Assets/Fonts/CuteFont-Regular.ttf" id="2_6uxqc"]
-[ext_resource type="Texture2D" uid="uid://gn6cjicvfqv3" path="res://Assets/Menus/mickey_selecionar_piada.png" id="2_owoha"]
+[ext_resource type="Texture2D" uid="uid://wxayo6ng41cf" path="res://Assets/Menus/mickey_selecionar_piada.png" id="2_owoha"]
 [ext_resource type="Script" path="res://Scripts/chapter_list.gd" id="4_roave"]
 [ext_resource type="Script" path="res://Scripts/peace_select_button.gd" id="5_unpmg"]
 
 [sub_resource type="Theme" id="Theme_p0xh4"]
 default_font = ExtResource("2_6uxqc")
 default_font_size = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xi3u8"]
+bg_color = Color(0.733333, 0.235294, 0.388235, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kkrxf"]
+bg_color = Color(0.545098, 0.231373, 0.329412, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eobgq"]
+bg_color = Color(0.392157, 0.152941, 0.223529, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="PeaceSelect" type="Node2D"]
 
@@ -44,3 +65,21 @@ offset_bottom = 722.0
 layout_mode = 2
 script = ExtResource("4_roave")
 button_script = ExtResource("5_unpmg")
+
+[node name="Back" type="Button" parent="."]
+custom_minimum_size = Vector2(80, 30)
+offset_left = 666.0
+offset_top = 602.0
+offset_right = 746.0
+offset_bottom = 645.0
+scale = Vector2(2, 2)
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_6uxqc")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_xi3u8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kkrxf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eobgq")
+text = "Back"
+
+[connection signal="mouse_entered" from="Back" to="MarginContainer/VBoxContainer" method="_on_back_mouse_entered"]
+[connection signal="pressed" from="Back" to="MarginContainer/VBoxContainer" method="_on_back_pressed"]

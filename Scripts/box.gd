@@ -10,7 +10,7 @@ var combination: String = ""
 
 @onready var joke : Dictionary = Management.data.chapters[Management.selected_chapter].jokes[Management.selected_joke] 
 
-@onready var _music: Array = [preload("res://Assets/Music/HaHa.mp3"), preload("res://Assets/Music/HaHaSouEuMickey.mp3"), preload("res://Assets/Music/HAHA_piada.mp3")]
+@onready var _music: Array = [preload("res://Assets/SoundEffects/HaHa.mp3"), preload("res://Assets/SoundEffects/HaHaSouEuMickey.mp3"), preload("res://Assets/SoundEffects/HAHA_piada.mp3")]
 @onready var frases : Array = [get_node("frase1"), get_node("frase2"), get_node("frase3")]
 
 func _physics_process(_delta: float):

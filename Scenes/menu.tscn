@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cxo2qqa0ey3rv"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_cs1ej"]
-[ext_resource type="Texture2D" uid="uid://v03abnjej2i2" path="res://Assets/Menus/SOACAPA.png" id="2_pg717"]
+[ext_resource type="Texture2D" uid="uid://dmmbphsu3dyr3" path="res://Assets/Menus/SOACAPA.png" id="2_pg717"]
 [ext_resource type="FontFile" uid="uid://bvp8t12cj2eml" path="res://Assets/Fonts/CuteFont-Regular.ttf" id="3_ksvb8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dvl1"]
@@ -83,10 +83,13 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gvm7f")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_y3lrd")
 text = "Sair"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="menu_song" type="AudioStreamPlayer" parent="."]
 volume_db = 10.0
 autoplay = true
 
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

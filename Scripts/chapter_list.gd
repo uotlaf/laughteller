@@ -30,3 +30,11 @@ func change_chapter(chap_no):
 			button.set_process(true)
 			
 
+
+
+func _on_back_pressed():
+	SoundFx.ui_button_press_func()
+	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
+
+func _on_back_mouse_entered():
+	SoundFx.ui_button_hover_func()
